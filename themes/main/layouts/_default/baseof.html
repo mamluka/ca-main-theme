@@ -18,7 +18,7 @@
 </head>
 {{ block "before_body" .}}
 {{ end }}
-<link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}css/all.css"/>
+<link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}static/css/all.css"/>
 <body>
 <style>
     .hidden {
@@ -68,6 +68,6 @@
     {{ partialCached "footer" . }}
     {{ end }}
 </div>
-<script src="{{ .Site.Params.static_domain_prefix }}js/app.js"></script>
+<script src="{{ .Site.Params.static_domain_prefix }}jstatic/s/app.js"></script>
 </body>
 </html>
