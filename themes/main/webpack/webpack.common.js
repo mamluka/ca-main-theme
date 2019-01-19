@@ -9,7 +9,7 @@ module.exports = {
         app: Path.resolve(__dirname, '../src/scripts/index.js')
     },
     output: {
-        path: Path.join(__dirname, '../static'),
+        path: Path.join(__dirname, '../static/static'),
         filename: 'js/app.js'
     },
     plugins: [
