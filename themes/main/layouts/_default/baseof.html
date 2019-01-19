@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ block "paginator" . }}
+{{ end }}
+<head>
+    <meta charset="utf-8">
+    {{ block "robotsmeta" . }}
+    <meta name="robots" content="index,follow"/>
+    {{ end }}
+    <title>{{ block "title" . }}
+        {{ .Title }}
+        {{ end }}
+    </title>
+    {{ block "head" . }}
+    {{ partial "head" . }}
+    {{ end }}
+
+</head>
+{{ block "before_body" .}}
+{{ end }}
+<link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}css/all.css"/>
+<body>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+{{ if .Site.Params.cse }}
+<script>
+    (function () {
+        var cx = '{{ .Site.Params.cse }}';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+</script>
+<!--<div style="position: absolute;padding-left: 110px;left:0;top:0;z-index: 1000;background-color: white">-->
+<!--<gcse:search></gcse:search>-->
+<!--</div>-->
+{{ end }}
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHH563R"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+{{ partialCached "mega-menu.html" . }}
+
+<div id="panel">
+    {{ block "header" . }}
+    {{ partial "header" . }}
+    {{ end }}
+
+    {{ block "top-ad-unit" .}}
+    {{ partial "top-ad-unit" . }}
+    {{ end }}
+
+    {{ block "main" . }}
+    {{ end }}
+
+    {{ block "bottom-ad-unit" .}}
+    {{ partial "bottom-ad-unit" . }}
+    {{ end }}
+
+    {{ block "footer" . }}
+    {{ partialCached "footer" . }}
+    {{ end }}
+</div>
+<script src="{{ .Site.Params.static_domain_prefix }}js/app.js"></script>
+</body>
+</html>

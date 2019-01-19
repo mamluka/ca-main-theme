@@ -1,0 +1,5 @@
+{{ $permalink := $.Page.Site.GetPermalinkByPageHumanId (.Get 0) }}
+{{ if len $permalink | gt 0 }}
+{{ $permalink }}
+{{ else}}{{ "#" }}
+{{ end}}

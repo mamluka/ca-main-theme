@@ -1,0 +1,82 @@
+<nav class="navbar c-navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{{ .Site.BaseURL }}">
+            {{ .Site.Params.title }}
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" href="#slide-mega-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item">
+
+                {{ $homepage := .Parent }}
+                {{ if .IsPage }}
+                {{ $homepage = $.Site.GetPageById (index (last 3 .AllAboveSectionsPageIds ) 0) }}
+                {{ end}}
+                <nav class="mega-menu">
+                    <ul>
+                        <li>
+                            <a href="#slide-mega-menu" class="menu-btn">
+                                <span></span>
+                            </a>
+                        </li>
+                        {{ if gt (len $.SubSectionsPageIds) 0 }}
+                        <li><a href="#">Sub sections</a>
+                            <ul>
+                                {{ range $.SubSectionsPageIds }}
+                                {{ $subsection := $.Site.GetPageByIdByString .}}
+                                <li>
+                                    <a href="{{ $subsection.Permalink }}">
+                                        {{ $subsection.Title }}
+                                    </a>
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </li>
+                        {{ end }}
+                        {{ if or .IsSection .IsPage }}
+                        {{ range first 6 $homepage.SubSectionsPageIds }}
+                        {{ $page := $.Site.GetPageByIdByString . }}
+                        {{ if $page }}
+                        <li>
+                            <a class="" href="{{ $page.Permalink }}"
+                               data-analytics
+                               data-category="nav"
+                               data-action="top-sections"
+                               data-label="{{ $page.Title }}">
+                                {{ $page.Title }}
+                            </a>
+                            <ul>
+                                {{ range $page.SubSectionsPageIds }}
+                                {{ $child_page := $.Site.GetPageByIdByString . }}
+                                {{ if $child_page }}
+                                <li>
+                                    <a class="" href="{{ $child_page.Permalink }}"
+                                       data-analytics
+                                       data-category="nav"
+                                       data-action="top-sections"
+                                       data-label="{{ $child_page.Title }}">
+                                        {{ $child_page.Title }}
+                                    </a>
+                                </li>
+                                {{ end }}
+                                {{ end }}
+
+                            </ul>
+                        </li>
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,50 @@
+<footer>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-4">
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        share icons
+                    </div>
+                    <div class="column is-6">
+                        <a href="/pages/privacy">Privacy</a>
+                    </div>
+                    <div class="column is-6">
+                        <a href="/pages/tac">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4">
+                {{ if .Site.Params.newsletter.show }}
+                <h1 class="is-size-3 has-text-weight-bold">
+                    Get our wellness newsletter
+                </h1>
+                <br/>
+                <h4 class="has-text-weight-semibold">Fitness and nutrition tips, health news, and more.
+
+                </h4>
+                <br/>
+
+                <div class="field">
+
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input">
+                    </div>
+                </div>
+                <div class="field">
+
+                    <div class="control">
+                        <button class="button">Subscribe</button>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            <div class="column is-4 ">
+<span class="copy-rights">
+    Copyright © {{.Site.Title }} - {{ dateFormat "2006" now }}
+
+</span>
+            </div>
+        </div>
+    </div>
+</footer>

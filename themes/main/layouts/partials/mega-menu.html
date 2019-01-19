@@ -1,0 +1,54 @@
+<nav id="slide-mega-menu" class="hidden">
+    {{ $homepage := $.Site.GetHomePage }}
+    <ul>
+        {{ range $homepage.SubSectionsPageIds }}
+        {{ $page := $.Site.GetPageByIdByString . }}
+        {{ if $page }}
+        <li>
+            <a class="" href="{{ $page.Permalink }}"
+               data-analytics
+               data-category="nav"
+               data-action="top-sections"
+               data-label="{{ $page.Title }}" >
+                {{ $page.Title }}
+            </a>
+            <ul>
+                {{ range $page.SubSectionsPageIds }}
+                {{ $child_page := $.Site.GetPageByIdByString . }}
+                {{ if $child_page }}
+                <li>
+                    <a class="" href="{{ $child_page.Permalink }}"
+                       data-analytics
+                       data-category="nav"
+                       data-action="top-sections"
+                       data-label="{{ $child_page.Title }}" >
+                        {{ $child_page.Title }}
+                    </a>
+                    <ul>
+                        {{ range $child_page.SubSectionsPageIds }}
+                        {{ $child_page_2 := $.Site.GetPageByIdByString . }}
+                        {{ if $child_page_2 }}
+                        <li>
+                            <a class="" href="{{ $child_page_2.Permalink }}"
+                               data-analytics
+                               data-category="nav"
+                               data-action="top-sections"
+                               data-label="{{ $child_page.Title }}" >
+                                {{ $child_page_2.Title }}
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ end }}
+
+                    </ul>
+                </li>
+                {{ end }}
+                {{ end }}
+
+            </ul>
+        </li>
+        {{ end }}
+        {{ end }}
+
+    </ul>
+</nav>

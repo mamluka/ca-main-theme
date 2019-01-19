@@ -1,0 +1,47 @@
+<h1>{{ .Title }}</h1>
+<figure class="image is-marginless locked-image">
+    <img src="{{ .Params.image }}">
+</figure>
+<div class="columns is-multiline">
+    <div class="column is-12">
+        <p>
+            We have our stuff search the internet and the dark web to find you all of <strong>{{ .Params.name }}</strong> nude photos, we have around {{ index (seq 15 | shuffle) 0 }} online galleries
+        </p>
+        <a class="button is-fullwidth is-danger" href="#verify-modal" rel="modal:open">UNLOCK GALLERIES</a>
+    </div>
+    <div class="column is-12">
+        <div class="columns is-multiline gallery-container">
+            <div class="column is-12">
+                <div class="content">
+                    <h2>Click an image to unlock it</h2>
+                    <p>
+                        In order to view the images you need to unlock it first.
+                    <hr/>
+                    </p>
+                </div>
+            </div>
+            {{ range first 12 .Params.gallery }}
+            <div class="column is-4 gallery-hover">
+                <a href="#verify-modal" rel="modal:open">
+                    <figure class="image locked-image">
+                        <img src="{{ . }}">
+                    </figure>
+                </a>
+            </div>
+            {{ end }}
+            <div class="column is-12">
+                <a class="button is-fullwidth is-danger" href="#verify-modal" rel="modal:open">DON'T FORGET TO UNLOCK GALLERIES</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="verify-modal" class="modal">
+    <div class="content">
+        <h4>
+            You can watch all nude photos of {{ .Params.name }} if you verify your age
+        </h4>
+    </div>
+    <iframe id="offer" class="offer-iframe">
+
+    </iframe>
+</div>

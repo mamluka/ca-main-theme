@@ -1,0 +1,8 @@
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{ $paginator := .Paginator }}
+  {{ range $paginator.Pagers }}
+  <sitemap>
+    <loc>{{ $.Site.BaseURL }}{{ substr .URL 1 }}sitemap.xml</loc>
+  </sitemap>
+  {{ end }}
+</sitemapindex>
