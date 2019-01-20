@@ -54,14 +54,14 @@
     {{ end }}
 
     {{ block "top-ad-unit" .}}
-    {{ partial "top-ad-unit" . }}
+    {{ partialCached "top-ad-unit" . }}
     {{ end }}
 
     {{ block "main" . }}
     {{ end }}
 
     {{ block "bottom-ad-unit" .}}
-    {{ partial "bottom-ad-unit" . }}
+    {{ partialCached "bottom-ad-unit" . }}
     {{ end }}
 
     {{ block "footer" . }}

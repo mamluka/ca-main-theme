@@ -30,7 +30,7 @@
                         <li><a href="#">Sub sections</a>
                             <ul>
                                 {{ range $.SubSectionsPageIds }}
-                                {{ $subsection := $.Site.GetPageByIdByString .}}
+                                {{ $subsection := $.Site.GetLitePageByPageIdByString .}}
                                 <li>
                                     <a href="{{ $subsection.Permalink }}">
                                         {{ $subsection.Title }}
@@ -42,7 +42,7 @@
                         {{ end }}
                         {{ if or .IsSection .IsPage }}
                         {{ range first 6 $homepage.SubSectionsPageIds }}
-                        {{ $page := $.Site.GetPageByIdByString . }}
+                        {{ $page := $.Site.GetLitePageByPageIdByString . }}
                         {{ if $page }}
                         <li>
                             <a class="" href="{{ $page.Permalink }}"
@@ -54,7 +54,7 @@
                             </a>
                             <ul>
                                 {{ range $page.SubSectionsPageIds }}
-                                {{ $child_page := $.Site.GetPageByIdByString . }}
+                                {{ $child_page := $.Site.GetLitePageByPageIdByString . }}
                                 {{ if $child_page }}
                                 <li>
                                     <a class="" href="{{ $child_page.Permalink }}"
