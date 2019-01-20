@@ -17,7 +17,7 @@
 
                 {{ $homepage := .Parent }}
                 {{ if .IsPage }}
-                {{ $homepage = $.Site.GetPageById (index (last 3 .AllAboveSectionsPageIds ) 0) }}
+                {{ $homepage = $.Site.GetLitePageByPageId (index (last 3 .AllAboveSectionsPageIds ) 0) }}
                 {{ end}}
                 <nav class="mega-menu">
                     <ul>
