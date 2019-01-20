@@ -7,7 +7,7 @@
                     <nav class="breadcrumb" aria-label="breadcrumbs">
                         <ul>
                             {{ range .AllAboveSectionsPageIds }}
-                            {{ $page := $.Site.GetPageById . }}
+                            {{ $page := $.Site.GetLitePageByPageId . }}
                             <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
                             {{ end }}
                         </ul>

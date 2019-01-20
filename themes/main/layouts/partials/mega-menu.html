@@ -2,7 +2,7 @@
     {{ $homepage := $.Site.GetHomePage }}
     <ul>
         {{ range $homepage.SubSectionsPageIds }}
-        {{ $page := $.Site.GetPageByIdByString . }}
+        {{ $page := $.Site.GetLitePageByPageIdByString . }}
         {{ if $page }}
         <li>
             <a class="" href="{{ $page.Permalink }}"
@@ -14,7 +14,7 @@
             </a>
             <ul>
                 {{ range $page.SubSectionsPageIds }}
-                {{ $child_page := $.Site.GetPageByIdByString . }}
+                {{ $child_page := $.Site.GetLitePageByPageIdByString . }}
                 {{ if $child_page }}
                 <li>
                     <a class="" href="{{ $child_page.Permalink }}"
@@ -26,7 +26,7 @@
                     </a>
                     <ul>
                         {{ range $child_page.SubSectionsPageIds }}
-                        {{ $child_page_2 := $.Site.GetPageByIdByString . }}
+                        {{ $child_page_2 := $.Site.GetLitePageByPageIdByString . }}
                         {{ if $child_page_2 }}
                         <li>
                             <a class="" href="{{ $child_page_2.Permalink }}"
