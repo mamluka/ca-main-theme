@@ -18,26 +18,32 @@
                             </div>
                         </div>
                         <div class="column is-6">
-                            <figure class="image">
-                                <img src="{{ $first_large_post.Image }}">
-                            </figure>
-                            <div class="content">
+                            <article>
                                 <a href="{{ $first_large_post.Permalink }}">
-                                    <h1>{{ $first_large_post.Title }}</h1>
+                                    <figure class="image">
+                                        <img src="{{ $first_large_post.Image }}">
+                                    </figure>
                                 </a>
-                                <p>
-                                    {{ $first_large_post.Summary }}
-                                </p>
-                            </div>
+                                <div class="content">
+                                    <a href="{{ $first_large_post.Permalink }}">
+                                        <h1>{{ $first_large_post.Title }}</h1>
+                                    </a>
+                                    <p>
+                                        {{ $first_large_post.Summary }}
+                                    </p>
+                                </div>
+                            </article>
                         </div>
                         <div class="column is-6">
                             {{ range $second_4_posts}}
                             <article class="media">
-                                <figure class="media-left">
-                                    <p class="image is-128x128">
-                                        <img src="{{ .Image }}">
-                                    </p>
-                                </figure>
+                                <a href="{{ .Permalink }}">
+                                    <figure class="media-left">
+                                        <p class="image is-128x128">
+                                            <img src="{{ .Image }}">
+                                        </p>
+                                    </figure>
+                                </a>
                                 <div class="media-content">
                                     <div class="content">
                                         <a href="{{ .Permalink }}">
@@ -65,9 +71,11 @@
                 <div class="column is-8">
                     {{ range $third_ten_posts }}
                     <article class="media">
-                        <figure class="media-left mobile-thumb">
-                            <img class="section-medium-image" src="{{ .Image }}">
-                        </figure>
+                        <a href="{{ .Permalink }}">
+                            <figure class="media-left mobile-thumb">
+                                <img class="section-medium-image" src="{{ .Image }}">
+                            </figure>
+                        </a>
                         <div class="media-content">
                             <div class="content">
                                 <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
@@ -90,9 +98,11 @@
                 <div class="column is-6">
                     <article class="media">
                         <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="{{ .Image }}" alt="Image">
-                            </figure>
+                            <a href="{{ .Permalink }}">
+                                <figure class="image is-64x64">
+                                    <img src="{{ .Image }}" alt="Image">
+                                </figure>
+                            </a>
                         </div>
                         <div class="media-content">
                             <div class="content">
@@ -100,7 +110,6 @@
                                     <h4>{{ .Title }}</h4>
                                 </a>
                                 <p>
-
                                     {{ .Summary }}
                                 </p>
 

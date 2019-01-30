@@ -22,7 +22,7 @@ function browserSyncReload(done) {
 }
 
 gulp.task('clean', function () {
-    del('public/**', {force: true});
+    return del('public/**', {force: true});
 });
 
 gulp.task('copy-pages', function () {
@@ -59,4 +59,4 @@ gulp.task('watch-all', function () {
         gulp.series('hugo'));
 });
 
-gulp.task('watch', gulp.parallel('watch-all', browserSync));
+gulp.task('watch', gulp.series('clean', 'copy-pages', 'hugo', gulp.parallel('watch-all', browserSync)));

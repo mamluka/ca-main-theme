@@ -1,45 +1,89 @@
 {{ define "main" }}
-<main>
-    <div class="section">
-        <div class="container is-fluid">
-            <div class="columns">
-                <div class="column is-8">
-                    <nav class="breadcrumb" aria-label="breadcrumbs">
-                        <ul>
-                            {{ range .AllAboveSectionsPageIds }}
-                            {{ $page := $.Site.GetLitePageByPageId . }}
-                            <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
-                            {{ end }}
-                        </ul>
-                    </nav>
-                    <div class="content">
+<div class="section">
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-8">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        {{ range .AllAboveSectionsPageIds }}
+                        {{ $page := $.Site.GetLitePageByPageId . }}
+                        {{ if $page }}
+                        <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </nav>
+                <div class="content">
 
-                        {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
+                    {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
+                    <hr/>
+                    <h1 class="is-size-3">READ THIS NEXT</h1>
+                    {{ range .Params.related_posts_ids }}
+                    <div class="box">
+                        {{ $page := $.Site.GetLitePageByPageHumanId . }}
+                        {{ if $page }}
+                        <article class="media">
+                            <div class="media-left">
+                                <a href="{{ $page.Permalink }}">
+                                    <figure class="image is-128x128">
+                                        <img src="{{ $page.Image }}" alt="Image">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                            <span class="is-size-3 has-text-weight-bold	">
+                                                <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                                            </span>
+                                        <br/>
+                                        {{ $page.Summary }}
+                                        <br/>
+                                        <br/>
+                                        <a href="{{ $page.Permalink }}" class="is-bold">
+                                            READ MORE ->
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        <div class="content">
+                            <strong>First nude iamge found on {{ dateFormat "2 January 2006" .Params.publishdate }}</strong>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="side-location has-text-centered">
+                            {{ partial "side-ad-unit.html" .}}
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <h1 class="is-size-3">related stories</h1>
                         <hr/>
-                        <h1 class="is-size-3">READ THIS NEXT</h1>
+
                         {{ range .Params.related_posts_ids }}
                         <div class="box">
                             {{ $page := $.Site.GetLitePageByPageHumanId . }}
                             {{ if $page }}
                             <article class="media">
                                 <div class="media-left">
-                                    <figure class="image is-128x128">
-                                        <img src="{{ $page.Image }}" alt="Image">
-                                    </figure>
+                                    <a href="{{ $page.Permalink}}">
+                                        <figure class="image is-64x64">
+                                            <img src="{{ $page.Image}}" alt="Image">
+                                        </figure>
+                                    </a>
                                 </div>
                                 <div class="media-content">
                                     <div class="content">
                                         <p>
-                                            <span class="is-size-3 has-text-weight-bold	">
-                                                <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
-                                            </span>
-                                            <br/>
-                                            {{ $page.Summary }}
-                                            <br/>
-                                            <br/>
-                                            <a href="{{ $page.Permalink }}" class="is-bold">
-                                                READ MORE ->
-                                            </a>
+                                            <strong><a href="{{ $page.Permalink}}"> {{ $page.Title }}</a></strong>
                                         </p>
                                     </div>
                                 </div>
@@ -49,48 +93,8 @@
                         {{ end }}
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="columns is-multiline">
-                        <div class="column is-12">
-                            <div class="content">
-                                <strong>First nude iamge found on {{ dateFormat "2 January 2006" .Params.publishdate }}</strong>
-                            </div>
-                        </div>
-                        <div class="column is-12">
-                            <div class="side-location">
-                                {{ partial "side-ad-unit.html" .}}
-                            </div>
-                        </div>
-                        <div class="column is-12">
-                            <h1 class="is-size-3">related stories</h1>
-                            <hr/>
-
-                            {{ range .Params.related_posts_ids }}
-                            <div class="box">
-                                {{ $page := $.Site.GetLitePageByPageHumanId . }}
-                                {{ if $page }}
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="{{ $page.Image}}" alt="Image">
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong><a href="{{ $page.Permalink}}"> {{ $page.Title }}</a></strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                                {{ end }}
-                            </div>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-</main>
+</div>
 {{ end }}

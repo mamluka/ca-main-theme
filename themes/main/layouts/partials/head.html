@@ -14,12 +14,7 @@
 <link rel="shortcut icon" href="{{ .Site.Params.static_domain_prefix }}{{ "favicon.ico" }}" />
 <link rel="canonical" href="{{ .CanonicalPermalink }}" />
 
-{{ if .IsPage }}
-<meta name="description" content="{{ .Params.seo_description | default (substr .Summary 0 160) }}" />
-{{ else }}
-<meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" />
-{{ end }}
 
-{{ partialCached "meta-twitter" . }}
-{{ partialCached "meta-facebook" . }}
+{{ partial "meta-twitter" . }}
+{{ partial "meta-facebook" . }}
 {{ partialCached "favicon.html" .}}

@@ -1,17 +1,17 @@
 baseurl: /
 theme: main
-languageCode: pl-PL
+languageCode: en-US
 paginate: 50
 preserveTaxonomyNames: true
-title: klubzdrowia.icu - Informacje medyczne i porady zdrowotne, którym możesz zaufać.
+title: nude-famous-people.com | All celebs - all the time
 disableKinds: ["RSS"]
 enableRobotsTXT: true
 themesDir: themes
 summaryLength: 10
 
 params:
-  title: klubzdrowia.icu
-  subtitle: Informacje medyczne i porady zdrowotne, którym możesz zaufać.
+  title: nude-famous-people.com
+  subtitle: All celebs - all the time.
   description: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
   metaDescription: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
   pageNotFoundTitle: 404 - Page not found

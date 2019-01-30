@@ -9,8 +9,12 @@
     {{ end }}
     <title>{{ block "title" . }}
         {{ .Title }}
-        {{ end }}
+    {{ end }}
     </title>
+    {{ block "description" . }}
+        <meta name="description" content="{{ .Params.seo_description }}" />
+    {{ end }}
+
     {{ block "head" . }}
     {{ partial "head" . }}
     {{ end }}
@@ -49,6 +53,8 @@
 {{ partialCached "mega-menu.html" . }}
 
 <div id="panel">
+    <main>
+
     {{ block "header" . }}
     {{ partial "header" . }}
     {{ end }}
@@ -63,6 +69,8 @@
     {{ block "bottom-ad-unit" .}}
     {{ partialCached "bottom-ad-unit" . }}
     {{ end }}
+
+    </main>
 
     {{ block "footer" . }}
     {{ partialCached "footer" . }}

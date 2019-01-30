@@ -24,27 +24,18 @@ $(function () {
     });
 
     var unlock = function () {
-        $('.offer-panel').show();
-        $('.unlock').hide();
-
         let items = window.Config.offer_ids;
 
         let offer = items[Math.floor(Math.random() * items.length)];
+        let loadingDiv = $("<div class='loading'></div>");
+
+        $('body').prepend(loadingDiv);
 
         $('#offer').attr('src', `https://govice.online/click?offer_id=${offer[0]}&affiliate_id=512&sub_id1=&link_id=${offer[1]}`);
 
-        var counter = 0;
-        var c = 0;
-        var i = setInterval(function() {
-            $(".loading-page .counter h1").html(c);
-            $(".loading-page").css("width", c + "%");
-
-            counter++;
-            c++;
-            if (counter === 101) {
-                clearInterval(i);
-            }
-        }, 50);
+        setTimeout(() => {
+            loadingDiv.remove()
+        }, 5000)
     };
 
     $('#verify-modal').on($.modal.OPEN, function () {

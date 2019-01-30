@@ -1,6 +1,10 @@
 {{ define "robotsmeta" }}
 <meta name="robots" content="index,follow"/>
 {{ end }}
+{{ define "description" }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+
 
 {{ define "paginator" }}
 {{ $a := .Paginate .Site.RegularPageIds }}

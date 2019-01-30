@@ -31,16 +31,19 @@
                             <ul>
                                 {{ range $.SubSectionsPageIds }}
                                 {{ $subsection := $.Site.GetLitePageByPageIdByString .}}
+                                {{ if $subsection }}
                                 <li>
                                     <a href="{{ $subsection.Permalink }}">
                                         {{ $subsection.Title }}
                                     </a>
                                 </li>
                                 {{ end }}
+                                {{ end }}
                             </ul>
                         </li>
                         {{ end }}
                         {{ if or .IsSection .IsPage }}
+                        {{ if $homepage }}
                         {{ range first 6 $homepage.SubSectionsPageIds }}
                         {{ $page := $.Site.GetLitePageByPageIdByString . }}
                         {{ if $page }}
@@ -70,6 +73,7 @@
 
                             </ul>
                         </li>
+                        {{ end }}
                         {{ end }}
                         {{ end }}
                         {{ end }}

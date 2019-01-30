@@ -1,12 +1,13 @@
-title: Terms and Conditions
-slug: tac
----
-<h2>Welcome to $website$</h2>
-<p>These terms and conditions outline the rules and regulations for the use of $website$'s Website.</p> <br />
-<span style="text-transform: capitalize;"> $website$</span> is located at:<br />
-<address> , <br /> - , <br />
-</address>
-<p>By accessing this website we assume you accept these terms and conditions in full. Do not continue to use $website$'s website
+{
+"title": "Terms and Conditions",
+"slug": "tac",
+"publishdate": "2018-12-14T16:57:42Z"
+}
+
+<h2>Welcome to {{< sitename >}}</h2>
+<p>These terms and conditions outline the rules and regulations for the use of {{< sitename >}}'s Website.</p> <br />
+
+<p>By accessing this website we assume you accept these terms and conditions in full. Do not continue to use {{< sitename >}}'s website
     if you do not accept all of the terms and conditions stated on this page.</p>
 <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice
     and any or all Agreements: “Client”, “You” and “Your” refers to you, the person accessing this website
@@ -18,21 +19,21 @@ slug: tac
     of provision of the Company’s stated services/products, in accordance with and subject to, prevailing law
     of . Any use of the above terminology or other words in the singular, plural,
     capitalisation and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p><h2>Cookies</h2>
-<p>We employ the use of cookies. By using $website$'s website you consent to the use of cookies
-    in accordance with $website$’s privacy policy.</p><p>Most of the modern day interactive web sites
+<p>We employ the use of cookies. By using {{< sitename >}}'s website you consent to the use of cookies
+    in accordance with {{< sitename >}}’s privacy policy.</p><p>Most of the modern day interactive web sites
     use cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site
     to enable the functionality of this area and ease of use for those people visiting. Some of our
     affiliate / advertising partners may also use cookies.</p><h2>License</h2>
-<p>Unless otherwise stated, $website$ and/or it’s licensors own the intellectual property rights for
-    all material on $website$. All intellectual property rights are reserved. You may view and/or print
-    pages from http://xxx.com for your own personal use subject to restrictions set in these terms and conditions.</p>
+<p>Unless otherwise stated, {{< sitename >}} and/or it’s licensors own the intellectual property rights for
+    all material on {{< sitename >}}. All intellectual property rights are reserved. You may view and/or print
+    pages from http://{{< siteurl >}} for your own personal use subject to restrictions set in these terms and conditions.</p>
 <p>You must not:</p>
 <ol>
-    <li>Republish material from http://xxx.com</li>
-    <li>Sell, rent or sub-license material from http://xxx.com</li>
-    <li>Reproduce, duplicate or copy material from http://xxx.com</li>
+    <li>Republish material from http://{{< siteurl >}}</li>
+    <li>Sell, rent or sub-license material from http://{{< siteurl >}}</li>
+    <li>Reproduce, duplicate or copy material from http://{{< siteurl >}}</li>
 </ol>
-<p>Redistribute content from $website$ (unless content is specifically made for redistribution).</p>
+<p>Redistribute content from {{< sitename >}} (unless content is specifically made for redistribution).</p>
 <h2>Hyperlinking to our Content</h2>
 <ol>
     <li>The following organizations may link to our Web site without prior written approval:
@@ -60,6 +61,7 @@ slug: tac
             <li>dot.com community sites;</li>
             <li>associations or other groups representing charities, including charity giving sites,</li>
             <li>online directory distributors;</li>
+            <li>online directory distributors;</li>
             <li>internet portals;</li>
             <li>accounting, law and consulting firms whose primary clients are businesses; and</li>
             <li>educational institutions and trade associations.</li>
@@ -70,7 +72,7 @@ slug: tac
     unfavorably on us or our accredited businesses (for example, trade associations or other organizations
     representing inherently suspect types of business, such as work-at-home opportunities, shall not be allowed
     to link); (b)the organization does not have an unsatisfactory record with us; (c) the benefit to us from
-    the visibility associated with the hyperlink outweighs the absence of <?=$companyName?>; and (d) where the
+    the visibility associated with the hyperlink outweighs the absence of {{< sitename >}} and (d) where the
     link is in the context of general resource information or is otherwise consistent with editorial content
     in a newsletter or similar product furthering the mission of the organization.</p>
 
@@ -80,7 +82,7 @@ slug: tac
     site.</p>
 
 <p>If you are among the organizations listed in paragraph 2 above and are interested in linking to our website,
-    you must notify us by sending an e-mail to <a href="mailto:xxx@xxx.cm" title="send an email to xxx@xxx.cm">xxx@xxx.cm</a>.
+    you must notify us by sending an e-mail to <a href="mailto:legal@{{< sitedomain >}}">legal@{{< sitedomain >}}</a>.
     Please include your name, your organization name, contact information (such as a phone number and/or e-mail
     address) as well as the URL of your site, a list of any URLs from which you intend to link to our Web site,
     and a list of the URL(s) on our site to which you would like to link. Allow 2-3 weeks for a response.</p>
@@ -93,7 +95,7 @@ slug: tac
     <li>By use of any other description of our Web site or material being linked to that makes sense within the
         context and format of content on the linking party's site.</li>
 </ol>
-<p>No use of $website$’s logo or other artwork will be allowed for linking absent a trademark license
+<p>No use of {{< sitename >}}’s logo or other artwork will be allowed for linking absent a trademark license
     agreement.</p>
 <h2>Iframes</h2>
 <p>Without prior approval and express written permission, you may not create frames around our Web pages or
@@ -130,9 +132,3 @@ slug: tac
     (including negligence) and for breach of statutory duty.</p>
 <p>To the extent that the website and the information and services on the website are provided free of charge,
     we will not be liable for any loss or damage of any nature.</p>
-<h2></h2>
-<p></p>
-<h2>Credit & Contact Information</h2>
-<p>This Terms and conditions page was created at <a style="color:inherit;text-decoration:none;cursor:text;"
-                                                    href="https://termsandconditionstemplate.com">termsandconditionstemplate.com</a> generator. If you have
-    any queries regarding any of our terms, please contact us.</p>

@@ -2,12 +2,18 @@
 <meta name="robots" content="index,follow"/>
 {{ end }}
 
+{{ define "title" }}
+{{ .Site.Params.title }} | {{ .Title }}
+{{ end }}
+
+{{ define "description" }}
+<meta name="description" content="Collection of sex nude photoes of celebs starring in films in the {{ .Title }} category, browse for best images and videos" />
+{{ end }}
+
 {{ define "paginator" }}
 {{ $a := .Paginate .AllSubSectionsPagesPageIds }}
 {{ end }}
 
 {{ define "main" }}
-<main>
     {{ partial "list.html" . }}
-</main>
 {{ end }}

@@ -16,18 +16,19 @@ $stock-color-1: #189133;
 @import '../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
 @import '../../../../node_modules/jquery-modal/jquery.modal.min.css';
 
+@import "loader";
+
 .c-navbar {
   border-bottom: $gray-2 1px solid;
 }
 
 .top-location {
   background-color: $gray-1;
-  height: 130px;
+  padding: 10px;
 }
 
 .bottom-location {
-
-  height: 130px;
+  padding: 10px;
 }
 
 .article {
@@ -36,8 +37,8 @@ $stock-color-1: #189133;
 
 .side-location {
   border-top: black 4px solid;
-  height: 380px;
   border-bottom: black 4px solid;
+  padding: 10px;
 }
 
 .section-medium-image {
@@ -210,7 +211,18 @@ nav.mega-menu {
 
 .locked-image {
   img {
+    filter: blur(0.75em) brightness(40%);
+  }
+}
 
+article {
+  .is-64x64 {
+    img {
+      filter: blur(0.25em) brightness(40%);
+    }
+  }
+
+  img {
     filter: blur(0.75em) brightness(40%);
   }
 }

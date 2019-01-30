@@ -20,6 +20,7 @@
                     </p>
                 </div>
             </div>
+            {{ if .Params.gallery }}
             {{ range first 12 .Params.gallery }}
             <div class="column is-4 gallery-hover">
                 <a href="#verify-modal" rel="modal:open">
@@ -28,6 +29,7 @@
                     </figure>
                 </a>
             </div>
+            {{ end }}
             {{ end }}
             <div class="column is-12">
                 <a class="button is-fullwidth is-danger" href="#verify-modal" rel="modal:open">DON'T FORGET TO UNLOCK GALLERIES</a>
