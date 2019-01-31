@@ -12,6 +12,16 @@
             <div class="columns">
                 <div class="column is-offset-1 is-10">
                     <div class="columns is-multiline">
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                {{ range .AllAboveSectionsPageIds }}
+                                {{ $page := $.Site.GetLitePageByPageId . }}
+                                {{ if $page }}
+                                <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+                                {{ end }}
+                                {{ end }}
+                            </ul>
+                        </nav>
                         <div class="column is-12">
                             <div class="content">
                                 <h1>{{ .Title }}</h1>
@@ -65,7 +75,7 @@
             {{ if gt $lite_pages_length 5 }}
             <div class="columns is-multiline">
                 <div class="column is-12">
-                    <h1 class="is-size-4 has-text-weight-bold">YOUR MDD WELLNESS GUIDE</h1>
+                    <h1 class="is-size-4 has-text-weight-bold">{{ $.Site.Params.sections.first_title }}</h1>
                     <hr/>
                 </div>
                 <div class="column is-8">
@@ -91,7 +101,7 @@
             {{ if gt $lite_pages_length 15 }}
             <div class="columns is-multiline">
                 <div class="column is-12">
-                    <h1 class="is-size-4 has-text-weight-bold">LIVING WELL WITH MDD</h1>
+                    <h1 class="is-size-4 has-text-weight-bold">{{ $.Site.Params.sections.second_title }}</h1>
                     <hr/>
                 </div>
                 {{range $fourth_rest_posts }}

@@ -2,16 +2,20 @@
 <meta name="robots" content="index,follow"/>
 {{ end }}
 {{ define "description" }}
-<meta name="description" content="{{ .Site.Params.description }}" />
+<meta name="description" content="{{ .Site.Params.description }}"/>
 {{ end }}
 
 
 {{ define "paginator" }}
+{{ if .Site.Params.homepage_publish_date }}
 {{ $a := .Paginate .Site.RegularPageIds }}
+{{ else }}
+{{ $a := .Paginate .AllSubSectionsPagesPageIds }}
+{{ end }}
 {{ end }}
 
 {{ define "main" }}
 <main>
-  {{ partial "list.html" . }}
+    {{ partial "list.html" . }}
 </main>
 {{ end }}

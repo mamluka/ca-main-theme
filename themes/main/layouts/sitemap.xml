@@ -1,23 +1,13 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{ $paginator := .Paginate .Site.AllPageIds 50000 }}
-  {{ range $paginator.PageIds }}
-  {{ $page := $.Site.GetPageById .}}
-  <url>
-    <loc>{{ $page.Permalink }}</loc>{{ if not $page.Lastmod.IsZero }}
-    <lastmod>{{ safeHTML ( $page.Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with $page.Sitemap.ChangeFreq }}
-    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge $page.Sitemap.Priority 0.0 }}
-    <priority>{{ $page.Sitemap.Priority }}</priority>{{ end }}{{ if $page.IsTranslated }}{{ range $page.Translations }}
-    <xhtml:link
-            rel="alternate"
-            hreflang="{{ .Lang }}"
-            href="{{ .Permalink }}"
-    />{{ end }}
-    <xhtml:link
-            rel="alternate"
-            hreflang="{{ $page.Lang }}"
-            href="{{ $page.Permalink }}"
-    />{{ end }}
-  </url>
-  {{ end }}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{ $paginator := .Paginate .Site.AllPageIds 50000 }}
+    {{ range $paginator.BulkLitePages .Site }}
+    {{ $page := . }}
+    <url>
+        <loc>{{ $page.Permalink }}</loc>
+        <lastmod>{{ safeHTML ( $page.PublishDate.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+        <changefreq>{{ $.Site.Params.sitemap.changefreq }}</changefreq>
+        <priority>1</priority>
+    </url>
+    {{ end }}
 </urlset>

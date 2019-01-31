@@ -12,14 +12,11 @@ summaryLength: 10
 params:
   title: nude-famous-people.com
   subtitle: All celebs - all the time.
-  description: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
-  metaDescription: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
+  description: Find all the celeb nude photoes you will ever need, unique photos gathered from around the web for your delight, sexy and bold celebs.
   pageNotFoundTitle: 404 - Page not found
   cse: 002181638325239780683:wuepawcebtk
   gtm: GTM-PQPN62S
   static_domain_prefix: /
-  newsletter:
-    show: false
   tr:
     next_blog_posts: Następne wpisy
     prev_blog_posts: Poprzednie wpisy
@@ -45,3 +42,9 @@ params:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+  homepage_publish_date: false
+  sitemap:
+    changefreq: monthly
+  sections:
+    first_title: More celeb nude photoes
+    second_title: Even more nude celeb photos for everyone
