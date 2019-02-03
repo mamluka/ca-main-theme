@@ -5,11 +5,7 @@
         {{ $page := $.Site.GetLitePageByPageIdByString . }}
         {{ if $page }}
         <li>
-            <a class="" href="{{ $page.Permalink }}"
-               data-analytics
-               data-category="nav"
-               data-action="top-sections"
-               data-label="{{ $page.Title }}" >
+            <a class="" href="{{ $page.Permalink }}">
                 {{ $page.Title }}
             </a>
             <ul>
@@ -17,11 +13,7 @@
                 {{ $child_page := $.Site.GetLitePageByPageIdByString . }}
                 {{ if $child_page }}
                 <li>
-                    <a class="" href="{{ $child_page.Permalink }}"
-                       data-analytics
-                       data-category="nav"
-                       data-action="top-sections"
-                       data-label="{{ $child_page.Title }}" >
+                    <a class="" href="{{ $child_page.Permalink }}">
                         {{ $child_page.Title }}
                     </a>
                     <ul>
@@ -29,11 +21,7 @@
                         {{ $child_page_2 := $.Site.GetLitePageByPageIdByString . }}
                         {{ if $child_page_2 }}
                         <li>
-                            <a class="" href="{{ $child_page_2.Permalink }}"
-                               data-analytics
-                               data-category="nav"
-                               data-action="top-sections"
-                               data-label="{{ $child_page.Title }}" >
+                            <a class="" href="{{ $child_page_2.Permalink }}">
                                 {{ $child_page_2.Title }}
                             </a>
                         </li>

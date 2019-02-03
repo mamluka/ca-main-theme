@@ -15,7 +15,7 @@
         <div class="navbar-start">
             <div class="navbar-item">
 
-                {{ $homepage := .Parent }}
+                {{ $homepage := .LiteParent }}
                 {{ if .IsPage }}
                 {{ $homepage = $.Site.GetLitePageByPageId (index (last 3 .AllAboveSectionsPageIds ) 0) }}
                 {{ end}}
@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         {{ if gt (len $.SubSectionsPageIds) 0 }}
-                        <li><a href="#">Sub sections</a>
+                        <li><a href="{{ $.Permalink }}">Sub sections</a>
                             <ul>
                                 {{ range $.SubSectionsPageIds }}
                                 {{ $subsection := $.Site.GetLitePageByPageIdByString .}}
@@ -48,11 +48,7 @@
                         {{ $page := $.Site.GetLitePageByPageIdByString . }}
                         {{ if $page }}
                         <li>
-                            <a class="" href="{{ $page.Permalink }}"
-                               data-analytics
-                               data-category="nav"
-                               data-action="top-sections"
-                               data-label="{{ $page.Title }}">
+                            <a href="{{ $page.Permalink }}">
                                 {{ $page.Title }}
                             </a>
                             <ul>
@@ -60,11 +56,7 @@
                                 {{ $child_page := $.Site.GetLitePageByPageIdByString . }}
                                 {{ if $child_page }}
                                 <li>
-                                    <a class="" href="{{ $child_page.Permalink }}"
-                                       data-analytics
-                                       data-category="nav"
-                                       data-action="top-sections"
-                                       data-label="{{ $child_page.Title }}">
+                                    <a href="{{ $child_page.Permalink }}">
                                         {{ $child_page.Title }}
                                     </a>
                                 </li>
