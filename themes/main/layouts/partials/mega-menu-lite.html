@@ -1,0 +1,29 @@
+<nav id="slide-mega-menu" class="hidden">
+    {{ $homepage := $.Site.GetHomePage }}
+    <ul>
+        {{ range $homepage.SubSectionsPageIds }}
+        {{ $page := $.Site.GetLitePageByPageIdByString . }}
+        {{ if $page }}
+        <li>
+            <a class="" href="{{ $page.Permalink }}">
+                {{ $page.Title }}
+            </a>
+            <ul>
+                {{ range $page.SubSectionsPageIds }}
+                {{ $child_page := $.Site.GetLitePageByPageIdByString . }}
+                {{ if $child_page }}
+                <li>
+                    <a class="" href="{{ $child_page.Permalink }}">
+                        {{ $child_page.Title }}
+                    </a>
+                </li>
+                {{ end }}
+                {{ end }}
+
+            </ul>
+        </li>
+        {{ end }}
+        {{ end }}
+
+    </ul>
+</nav>
