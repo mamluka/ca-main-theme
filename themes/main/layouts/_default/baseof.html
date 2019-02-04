@@ -50,10 +50,13 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
+{{ partialCached "mega-menu-lite.html" . }}
+
 <div id="panel">
     <main>
 
     {{ block "header" . }}
+        {{ partial "header" . }}
     {{ end }}
 
     {{ block "top-ad-unit" .}}
