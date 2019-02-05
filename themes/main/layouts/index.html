@@ -7,10 +7,12 @@
 
 
 {{ define "paginator" }}
+{{ if .InitPaginator }}
 {{ if .Site.Params.homepage_publish_date }}
 {{ $a := .Paginate .Site.RegularPageIds }}
 {{ else }}
 {{ $a := .Paginate .AllSubSectionsPagesPageIds }}
+{{ end }}
 {{ end }}
 {{ end }}
 
