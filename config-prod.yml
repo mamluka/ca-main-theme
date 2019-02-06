@@ -17,16 +17,6 @@ params:
   cse: 002181638325239780683:wuepawcebtk
   gtm: GTM-PQPN62S
   static_domain_prefix: https://chs.is-gay.pro/
-  tr:
-    next_blog_posts: Następne wpisy
-    prev_blog_posts: Poprzednie wpisy
-    pagination_page: Strona
-    pagination_page_of: z
-    sections_sub_categories: Podsekcje
-    single_tags: Tagi
-    sections_collection_of: Eine Sammlung von
-    sections_posts: wpisów
-    sections_post: wpis
   single_page:
     partial: nfp.com
   ads:

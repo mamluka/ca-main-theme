@@ -1,6 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{ if .InitPaginator }}
     {{ $paginator := .Paginate .Site.AllPageIds 50000 }}
-    {{ range $paginator.BulkLitePages .Site }}
+    {{ end }}
+
+    {{ range .Paginator.BulkLitePages .Site }}
     {{ $page := . }}
     <url>
         <loc>{{ $page.Permalink }}</loc>
