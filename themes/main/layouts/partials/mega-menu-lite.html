@@ -1,6 +1,11 @@
 <nav id="slide-mega-menu" class="hidden">
     {{ $homepage := $.Site.GetHomePage }}
     <ul>
+        <li>
+            <a class="" href="{{ .Site.BaseURL}}">
+                Home
+            </a>
+        </li>
         {{ range $homepage.SubSectionsPageIds }}
         {{ $page := $.Site.GetLitePageByPageIdByString . }}
         {{ if $page }}
