@@ -5,6 +5,16 @@ var browsersync = require("browser-sync").create();
 var hugoExe = 'uber_hugo';
 var del = require('del');
 var devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development');
+var argv = require('yargs').argv;
+
+function hugoConfig() {
+    if (argv.customHugoConfig) {
+        return argv.customHugoConfig
+    } else {
+        return devBuild ? 'config-dev.yml' : 'config-prod.yml';
+    }
+}
+
 
 function browserSync(done) {
     browsersync.init({
@@ -32,11 +42,15 @@ gulp.task('copy-pages', function () {
 gulp.task('hugo', function (cb) {
     var args = [
         '--config',
-        devBuild ? 'config-dev.yml' : 'config-prod.yml',
+        hugoConfig(),
         '--rocketDbDir',
         '/Users/davidmz/dev/clone-army/test-db',
         '--renderThreads',
-        '6'
+        '6',
+        '--redisUrl',
+        'localhost:6379',
+        '--mongoUrl',
+        'localhost:27017'
     ];
 
     return spawn(hugoExe, args, {stdio: 'inherit'}).on('close', (code) => {

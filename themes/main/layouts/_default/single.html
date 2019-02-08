@@ -25,25 +25,25 @@
                         <article class="media">
                             <div class="media-left">
                                 <a href="{{ $page.Permalink }}">
-                                    <figure class="image is-128x128">
+                                    <figure class="image mobile-thumb">
                                         <img src="{{ $page.Image }}" alt="Image">
                                     </figure>
                                 </a>
                             </div>
                             <div class="media-content">
                                 <div class="content">
-                                    <p>
-                                            <span class="is-size-3 has-text-weight-bold	">
-                                                <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
-                                            </span>
-                                        <br/>
-                                        {{ $page.Summary }}
-                                        <br/>
-                                        <br/>
-                                        <a href="{{ $page.Permalink }}" class="is-bold">
-                                            READ MORE ->
-                                        </a>
-                                    </p>
+
+                                    <a href="{{ $page.Permalink }}">
+                                        <h2>{{ $page.Title }}</h2>
+                                    </a>
+
+                                    <br/>
+                                    {{ $page.Summary }}
+                                    <br/>
+                                    <br/>
+                                    <a href="{{ $page.Permalink }}" class="is-bold">
+                                        READ MORE ->
+                                    </a>
                                 </div>
                             </div>
                         </article>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="column is-12">
-                        <h1 class="is-size-3">related stories</h1>
+                        <h1 class="is-size-3">Related stories</h1>
                         <hr/>
 
                         {{ range .Params.related_posts_ids }}

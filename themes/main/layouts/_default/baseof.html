@@ -23,7 +23,7 @@
 {{ block "before_body" .}}
 {{ end }}
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}static/css/all.css"/>
-<body>
+<body class="{{ .Site.Params.css_theme }}">
 <style>
     .hidden {
         display: none;

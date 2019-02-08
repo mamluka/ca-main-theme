@@ -10,7 +10,7 @@ themesDir: themes
 summaryLength: 10
 
 params:
-  title: nude-famous-people.com
+  title: nfp.com
   subtitle: All celebs - all the time.
   description: Find all the celeb nude photoes you will ever need, unique photos gathered from around the web for your delight, sexy and bold celebs.
   pageNotFoundTitle: 404 - Page not found
@@ -48,3 +48,4 @@ params:
   sections:
     first_title: More celeb nude photoes
     second_title: Even more nude celeb photos for everyone
+  css_theme: nfp

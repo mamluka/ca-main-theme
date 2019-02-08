@@ -1,6 +1,6 @@
-<footer>
+<footer class="footer">
     <div class="container is-fluid">
-        <div class="columns">
+        <div class="columns is-multiline">
             <div class="column is-4">
                 <div class="columns is-multiline">
                     <div class="column is-6">
@@ -41,6 +41,11 @@
     Copyright © {{.Site.Params.Title }} - {{ dateFormat "2006" now }}
 
 </span>
+            </div>
+            <div class="column is-12">
+                {{ range $key,$value :=  $.Site.GetAllLanguages }}
+                <a href="{{ $.Site.BaseURL}}{{ $key }}">{{ $value.title }}</a>
+                {{ end }}
             </div>
         </div>
     </div>

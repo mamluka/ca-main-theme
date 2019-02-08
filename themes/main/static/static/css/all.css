@@ -9049,6 +9049,23 @@ body.modal-open .mm-slideout {
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
+body.nfp .gallery-hover:hover {
+  border: 4px dotted gold; }
+
+body.nfp .locked-image img {
+  filter: blur(0.75em) brightness(40%); }
+
+body.nfp article .is-64x64 img {
+  filter: blur(0.25em) brightness(40%); }
+
+body.nfp article img {
+  filter: blur(0.75em) brightness(40%); }
+
+body.nfp .offer-iframe {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #9eabb3; }
+
 .c-navbar {
   border-bottom: #DCDBDB 1px solid; }
 
@@ -9192,22 +9209,18 @@ nav.mega-menu ul ul ul {
 .menu-btn_active span:after {
   transform: rotate(-45deg); }
 
-.gallery-hover:hover {
-  border: 4px dotted gold; }
+.content h2 {
+  font-size: 1.25em; }
+  @media (min-width: 768px) {
+    .content h2 {
+      font-size: 1.75em; } }
 
-.locked-image img {
-  filter: blur(0.75em) brightness(40%); }
-
-article .is-64x64 img {
-  filter: blur(0.25em) brightness(40%); }
-
-article img {
-  filter: blur(0.75em) brightness(40%); }
-
-.offer-iframe {
-  width: 100%;
-  height: 500px;
-  border: 1px solid #9eabb3; }
+.mobile-thumb {
+  width: 64px; }
+  @media (min-width: 768px) {
+    .mobile-thumb {
+      min-width: 64px;
+      width: initial; } }
 
 
 /*# sourceMappingURL=all.css.map*/
