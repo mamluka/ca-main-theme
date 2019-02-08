@@ -1,4 +1,4 @@
-baseurl: https://celebrity-hair-secrets.com/
+baseurl: https://nude-famous-people.com/
 theme: main
 languageCode: en-US
 paginate: 50
@@ -10,13 +10,13 @@ themesDir: themes
 summaryLength: 10
 
 params:
-  title: nude-famous-people.com
+  title: nfp.com
   subtitle: All celebs - all the time.
   description: Find all the celeb nude photoes you will ever need, unique photos gathered from around the web for your delight, sexy and bold celebs.
   pageNotFoundTitle: 404 - Page not found
   cse: 002181638325239780683:wuepawcebtk
   gtm: GTM-PQPN62S
-  static_domain_prefix: https://nude-famous-people.com.all-assets.xyz/
+  static_domain_prefix: https://nude-famous-people-com.all-assets.xyz/
   single_page:
     partial: nfp.com
   ads:
