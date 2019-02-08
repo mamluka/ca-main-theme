@@ -1,0 +1,54 @@
+baseurl: /
+theme: main
+languageCode: pl-PL
+paginate: 50
+preserveTaxonomyNames: true
+title: klubzdrowia.icu - Informacje medyczne i porady zdrowotne, którym możesz zaufać.
+disableKinds: ["RSS"]
+enableRobotsTXT: true
+themesDir: themes
+summaryLength: 10
+DefaultContentLanguage: it
+#defaultContentLanguageInSubdir: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+languages:
+  it:
+    title: Mon blogue
+  de:
+    title: Mon blogue
+  es:
+    title: Mon blogue
+  fr:
+    title: Mon blogue
+
+params:
+  title: klubzdrowia.icu
+  subtitle: Informacje medyczne i porady zdrowotne, którym możesz zaufać.
+  description: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
+  metaDescription: Zależy nam na tym, aby być źródłem specjalistycznych wskazówek zdrowotnych. Przyjdź do nas w swoim dążeniu do odnowy biologicznej.
+  pageNotFoundTitle: 404 - Page not found
+  cse: 002181638325239780683:wuepawcebtk
+  gtm: GTM-PQPN62S
+  static_domain_prefix: /
+  newsletter:
+    show: false
+  single_page:
+    partial: content
+  ads:
+    top_ad:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/5354/blackwolf-generic-728x90.png
+      banner_url: https://mixi.mn/?a=146186&c=5198&p=r&s3=top-banner
+    bottom_ad:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/5778/WeightLoss5.jpg
+      banner_url: https://mixi.mn/?a=146186&c=30&p=r&s2=bottom-banner
+    side_ad:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
+      banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+  css_theme: regular
