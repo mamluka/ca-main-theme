@@ -1,0 +1,5 @@
+{{ if $.Params.lang_group_id }}
+{{ range $.Site.GetAllLangVersionsPageIds $.Params.lang_group_id }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
+{{ end }}
+{{ end }}

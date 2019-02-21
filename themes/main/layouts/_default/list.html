@@ -1,0 +1,13 @@
+{{ define "robotsmeta" }}
+<meta name="robots" content="index,follow"/>
+{{ end }}
+
+{{ define "paginator" }}
+{{ $a := .Paginate .PageIds }}
+{{ end }}
+
+{{ define "main" }}
+<main>
+    {{ partial "list.html" . }}
+</main>
+{{ end }}

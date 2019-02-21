@@ -13,15 +13,22 @@
                         {{ end }}
                     </ul>
                 </nav>
+
                 <div class="content">
 
                     {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
+                    {{ range .Params.tags }}
+                    <span class="tag">
+                            <a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}">{{ . }}</a>
+                        </span>
+                    {{ end }}
                     <hr/>
-                    <h1 class="is-size-3">READ THIS NEXT</h1>
+                    {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
+                    <h1 class="is-size-3">{{ T "read_this_next" }}</h1>
                     {{ range .Params.related_posts_ids }}
+                    {{ $page := $.Site.GetLitePageByPageHumanId . }}
+                    {{ if $page }}
                     <div class="box">
-                        {{ $page := $.Site.GetLitePageByPageHumanId . }}
-                        {{ if $page }}
                         <article class="media">
                             <div class="media-left">
                                 <a href="{{ $page.Permalink }}">
@@ -42,36 +49,36 @@
                                     <br/>
                                     <br/>
                                     <a href="{{ $page.Permalink }}" class="is-bold">
-                                        READ MORE ->
+                                        {{ T "read_more" }} ->
                                     </a>
                                 </div>
                             </div>
                         </article>
-                        {{ end }}
                     </div>
+                    {{ end }}
+                    {{ end }}
                     {{ end }}
                 </div>
             </div>
             <div class="column is-4">
                 <div class="columns is-multiline">
-                    <div class="column is-12">
-                        <div class="content">
-                            <strong>First nude iamge found on {{ dateFormat "2 January 2006" .Params.publishdate }}</strong>
-                        </div>
-                    </div>
+
                     <div class="column is-12">
                         <div class="side-location has-text-centered">
                             {{ partial "side-ad-unit.html" .}}
                         </div>
                     </div>
+
+                    {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
                     <div class="column is-12">
-                        <h1 class="is-size-3">Related stories</h1>
+
+                        <h1 class="is-size-3">{{ T "related_stories" }}</h1>
                         <hr/>
 
                         {{ range .Params.related_posts_ids }}
+                        {{ $page := $.Site.GetLitePageByPageHumanId . }}
+                        {{ if $page }}
                         <div class="box">
-                            {{ $page := $.Site.GetLitePageByPageHumanId . }}
-                            {{ if $page }}
                             <article class="media">
                                 <div class="media-left">
                                     <a href="{{ $page.Permalink}}">
@@ -88,10 +95,11 @@
                                     </div>
                                 </div>
                             </article>
-                            {{ end }}
                         </div>
                         {{ end }}
+                        {{ end }}
                     </div>
+                    {{ end }}
                 </div>
             </div>
         </div>

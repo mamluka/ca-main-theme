@@ -1,0 +1,6 @@
+<div class="column is-12">
+    <div>{{ T "also_available_in" }}</div>
+    {{ range $key,$value := $.Site.GetAllLanguages }}
+    <a href="{{ $.Site.BaseURL}}{{ $key }}" class="button is-outlined">{{ $value.lang_name }}</a>
+    {{ end }}
+</div>

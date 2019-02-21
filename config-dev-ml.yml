@@ -1,9 +1,7 @@
 baseurl: /
 theme: main
-languageCode: pl-PL
 paginate: 50
 preserveTaxonomyNames: true
-title: klubzdrowia.icu - Informacje medyczne i porady zdrowotne, którym możesz zaufać.
 disableKinds: ["RSS"]
 enableRobotsTXT: true
 themesDir: themes
@@ -12,18 +10,33 @@ DefaultContentLanguage: it
 #defaultContentLanguageInSubdir: true
 
 taxonomies:
-  category: categories
   tag: tags
 
 languages:
   it:
-    title: Mon blogue
+    title: searchworkd.pro - SEO, ricerca notizie di marketing ed esercitazioni
+    menu_title: searchworkd.pro
+    description: searchworld.pro è dedicato alla produzione delle ultime notizie di ricerca, le migliori guide e how-to per la comunità SEO e marketer.
+    languageCode: it-IT
+    lang_name: Italiano
   de:
-    title: Mon blogue
+    title: searchworkd.pro - SEO, Suche nach Marketingnachrichten und Tutorials
+    menu_title: searchworkd.pro
+    languageCode: de-DE
+    lang_name: Deutsch
+    description: searchworld.pro ist bestrebt, die neuesten Suchnachrichten, die besten Leitfäden und Anleitungen für die SEO- und Marketer-Community zu produzieren.
   es:
-    title: Mon blogue
+    title: searchworkd.pro - SEO, búsqueda de noticias de marketing y tutoriales.
+    menu_title: searchworkd.pro
+    languageCode: es-ES
+    lang_name: español
+    description: searchworld.pro está dedicado a producir las últimas noticias de búsqueda, las mejores guías y procedimientos para la comunidad de SEO y marketing.
   fr:
-    title: Mon blogue
+    title: searchworkd.pro - SEO, actualités et tutoriels de marketing de recherche
+    menu_title: searchworkd.pro
+    languageCode: fr-FR
+    lang_name: français
+    description: searchworld.pro se consacre à la production des dernières nouvelles en matière de recherche, des meilleurs guides et des guides pour la communauté des spécialistes du marketing et du référencement.
 
 params:
   title: klubzdrowia.icu
@@ -52,3 +65,8 @@ params:
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
   css_theme: regular
+  sitemap:
+    changefreq: monthly
+  in_post_ad:
+    pub_id: ca-pub-3609124934128625
+    slot_id: 4432820139

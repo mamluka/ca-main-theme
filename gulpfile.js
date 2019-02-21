@@ -67,6 +67,7 @@ gulp.task('watch-all', function () {
     watch([
             'themes/main/static/**/*.*',
             'themes/main/layouts/**/*.html',
+            'themes/main/i18n/**/*.toml',
             'content/**/*.md',
             'config*.yml',
         ],

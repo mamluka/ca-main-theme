@@ -4,10 +4,10 @@
             <div class="column is-4">
                 <div class="columns is-multiline">
                     <div class="column is-6">
-                        <a href="/pages/privacy">Privacy</a>
+                        <a href="/pages/privacy">{{ T "privacy" }}</a>
                     </div>
                     <div class="column is-6">
-                        <a href="/pages/tac">Terms and Conditions</a>
+                        <a href="/pages/tac">{{ T "tac" }}</a>
                     </div>
                 </div>
             </div>
@@ -38,10 +38,11 @@
             </div>
             <div class="column is-4 ">
 <span class="copy-rights">
-    Copyright © {{.Site.Params.Title }} - {{ dateFormat "2006" now }}
+    © {{.Site.Params.Title }} - {{ dateFormat "2006" now }}
 
 </span>
             </div>
+            {{ partialCached "lang-selection.html" . }}
         </div>
     </div>
 </footer>
