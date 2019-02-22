@@ -140,7 +140,7 @@
                     <a href="{{ .Paginator.Prev.URL }}" class="pagination-previous">{{ T "back" }}</a>
                     {{ end }}
                     {{ if .Paginator.HasNext }}
-                    <a href="{{ .Paginator.Next.URL }}" class="pagination-next">{{ T "next" }}</a>
+                    <a href="{{ .Paginator.Next.URL }}" class="pagination-next">{{ T "next"}}</a>
                     {{ end }}
                     <ul class="pagination-list">
                         {{ $pagersCollection := .Paginator.AroundPagers .Paginator.PageNumber 3 6}}
