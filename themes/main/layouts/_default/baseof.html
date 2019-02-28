@@ -74,7 +74,7 @@
     </main>
 
     {{ block "footer" . }}
-    {{ partialCached "footer" . }}
+    {{ partial "footer" . }}
     {{ end }}
 </div>
 <script src="{{ .Site.Params.static_domain_prefix }}static/js/app.js"></script>

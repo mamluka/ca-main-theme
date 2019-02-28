@@ -2,8 +2,9 @@
     {{ $paginator := .Paginator }}
     {{ range $paginator.Pagers }}
     {{ $pager := . }}
+    {{ if $.Site.Params.multilang.share_sitemap_index }}
+    {{ range $key,$value := $.Site.GetAllLanguages }}
     <sitemap>
-        {{ range $key,$value := $.Site.GetAllLanguages }}
 
         {{ if eq $pager.PageNumber 1 }}
 
@@ -15,7 +16,12 @@
         <loc>{{ $.Site.BaseURL }}{{ $key }}/page/{{ $pager.PageNumber }}/sitemap.xml</loc>
         {{ end }}
         {{ end }}
-        {{ end }}
     </sitemap>
+    {{ end }}
+    {{ else }}
+    <sitemap>
+        <loc>{{ $.Site.BaseURL }}{{ substr .URL 1 }}sitemap.xml</loc>
+    </sitemap>
+    {{ end }}
     {{ end }}
 </sitemapindex>

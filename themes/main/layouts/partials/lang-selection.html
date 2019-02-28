@@ -1,6 +1,12 @@
 <div class="column is-12">
     <div>{{ T "also_available_in" }}</div>
-    {{ range $key,$value := $.Site.GetAllLangVersionsPageIds }}
+    {{ if .Params.lang_group_id }}
+    {{ range $.Site.GetAllLangVersionsPageIds .Params.lang_group_id}}
     <a href="{{ .Permalink }}" class="button is-outlined">{{ .Lang }}</a>
+    {{ end }}
+    {{ else }}
+    {{ range $key,$value := $.Site.GetAllLanguages }}
+    <a href="{{ $.Site.BaseURL}}{{ $key }}" class="button is-outlined">{{ $value.lang_name }}</a>
+    {{ end }}
     {{ end }}
 </div>

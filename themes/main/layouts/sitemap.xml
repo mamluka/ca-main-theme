@@ -1,5 +1,4 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="https://www.w3.org/1999/xhtml">
     {{ if .InitPaginator }}
     {{ $paginator := .Paginate .Site.AllPageIds 50000 }}
     {{ end }}
@@ -12,7 +11,7 @@
         <changefreq>{{ $.Site.Params.sitemap.changefreq }}</changefreq>
         <priority>1</priority>
         {{ if .LangGroupId }}
-        {{ range $.Site.GetAllLangVersionsPageIds .Params.lang_group_id }}
+        {{ range $.Site.GetAllLangVersionsPageIds .LangGroupId }}
         <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
         {{ end }}
         {{ end }}
