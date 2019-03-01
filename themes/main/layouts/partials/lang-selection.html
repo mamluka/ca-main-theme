@@ -2,7 +2,7 @@
     <div>{{ T "also_available_in" }}</div>
     {{ if .Params.lang_group_id }}
     {{ range $.Site.GetAllLangVersionsPageIds .Params.lang_group_id}}
-    <a href="{{ .Permalink }}" class="button is-outlined">{{ .Lang }}</a>
+    <a href="{{ .Permalink }}" class="button is-outlined">{{ $lang:= index $.Site.GetAllLanguages .Lang }}{{ $lang.lang_name}}</a>
     {{ end }}
     {{ else }}
     {{ range $key,$value := $.Site.GetAllLanguages }}

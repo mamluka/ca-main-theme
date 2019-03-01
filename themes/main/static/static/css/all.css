@@ -9085,10 +9085,31 @@ body.nfp .offer-iframe {
   padding: 10px; }
 
 .section-medium-image {
-  width: 96px !important; }
+  object-fit: scale-down;
+  width: 96px !important;
+  max-height: 98px; }
   @media (min-width: 768px) {
     .section-medium-image {
-      width: 345px !important; } }
+      min-width: 345px !important;
+      max-height: 200px; } }
+
+.section-regular-image {
+  object-fit: scale-down;
+  width: 128px !important;
+  max-height: 128px; }
+  @media (min-width: 768px) {
+    .section-regular-image {
+      min-width: 128px !important;
+      max-height: 128px; } }
+
+.section-small-image {
+  object-fit: scale-down;
+  width: 64px !important;
+  max-height: 64px; }
+  @media (min-width: 768px) {
+    .section-small-image {
+      min-width: 64px !important;
+      max-height: 64px; } }
 
 footer {
   padding-top: 35px;

@@ -44,9 +44,32 @@ $stock-color-1: #189133;
 
 .section-medium-image {
   @include breakpoint(768px) {
-    width: 345px !important;
+    min-width: 345px !important;
+    max-height: 200px;
   }
+  object-fit: scale-down;
   width: 96px !important;
+  max-height: 98px;
+}
+
+.section-regular-image {
+  @include breakpoint(768px) {
+    min-width: 128px !important;
+    max-height: 128px;
+  }
+  object-fit: scale-down;
+  width: 128px !important;
+  max-height: 128px;
+}
+
+.section-small-image {
+  @include breakpoint(768px) {
+    min-width: 64px !important;
+    max-height: 64px;
+  }
+  object-fit: scale-down;
+  width: 64px !important;
+  max-height: 64px;
 }
 
 footer {

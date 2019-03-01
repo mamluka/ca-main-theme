@@ -23,6 +23,7 @@
                         </span>
                     {{ end }}
                     <hr/>
+                    {{ if .Params.related_posts_ids }}
                     {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
                     <h1 class="is-size-3">{{ T "read_this_next" }}</h1>
                     {{ range .Params.related_posts_ids }}
@@ -58,6 +59,7 @@
                     {{ end }}
                     {{ end }}
                     {{ end }}
+                    {{ end }}
                 </div>
             </div>
             <div class="column is-4">
@@ -68,7 +70,7 @@
                             {{ partial "side-ad-unit.html" .}}
                         </div>
                     </div>
-
+                    {{ if .Params.related_posts_ids }}
                     {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
                     <div class="column is-12">
 
@@ -99,7 +101,14 @@
                         {{ end }}
                         {{ end }}
                     </div>
+                    <div class="column is-12">
+                        <div class="has-text-centered">
+                            {{ partial "below-related-ad-unit.html" .}}
+                        </div>
+                    </div>
                     {{ end }}
+                    {{ end }}
+
                 </div>
             </div>
         </div>

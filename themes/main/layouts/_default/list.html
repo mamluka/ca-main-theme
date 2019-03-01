@@ -3,7 +3,13 @@
 {{ end }}
 
 {{ define "paginator" }}
+{{ if .InitPaginator }}
+{{ if $.Site.Params.homepage_publish_date }}
+{{ $a := .Paginate ($.Site.SortLitePagesByPublishDate .PageIds) }}
+{{ else }}
 {{ $a := .Paginate .PageIds }}
+{{ end }}
+{{ end }}
 {{ end }}
 
 {{ define "main" }}

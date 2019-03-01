@@ -47,13 +47,13 @@
                         <div class="column is-6">
                             {{ range $second_4_posts}}
                             <article class="media">
-                                <a href="{{ .Permalink }}">
-                                    <figure class="media-left">
+                                <figure class="media-left">
+                                    <a href="{{ .Permalink }}">
                                         <p class="image is-128x128">
-                                            <img src="{{ .Image }}">
+                                            <img class="section-regular-image" src="{{ .Image }}">
                                         </p>
-                                    </figure>
-                                </a>
+                                    </a>
+                                </figure>
                                 <div class="media-content">
                                     <div class="content">
                                         <a href="{{ .Permalink }}">
@@ -110,7 +110,7 @@
                         <div class="media-left">
                             <a href="{{ .Permalink }}">
                                 <figure class="image is-64x64">
-                                    <img src="{{ .Image }}" alt="Image">
+                                    <img class="section-small-image" src="{{ .Image }}" alt="Image">
                                 </figure>
                             </a>
                         </div>

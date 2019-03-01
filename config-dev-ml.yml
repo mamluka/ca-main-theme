@@ -6,6 +6,7 @@ enableRobotsTXT: true
 themesDir: themes
 summaryLength: 10
 DefaultContentLanguage: it
+baseURL: /
 #defaultContentLanguageInSubdir: true
 
 
@@ -14,28 +15,28 @@ taxonomies:
 
 languages:
   it:
-    baseURL: https://example1.com/
+    #    baseURL: https://example1.com/
     title: searchworkd.pro - SEO, ricerca notizie di marketing ed esercitazioni
     menu_title: searchworkd.pro
     description: searchworld.pro è dedicato alla produzione delle ultime notizie di ricerca, le migliori guide e how-to per la comunità SEO e marketer.
     languageCode: it-IT
     lang_name: Italiano
   de:
-    baseURL: https://example2.com/
+    #    baseURL: https://example2.com/
     title: searchworkd.pro - SEO, Suche nach Marketingnachrichten und Tutorials
     menu_title: searchworkd.pro
     languageCode: de-DE
     lang_name: Deutsch
     description: searchworld.pro ist bestrebt, die neuesten Suchnachrichten, die besten Leitfäden und Anleitungen für die SEO- und Marketer-Community zu produzieren.
   es:
-    baseURL: https://example3.com/
+    #    baseURL: https://example3.com/
     title: searchworkd.pro - SEO, búsqueda de noticias de marketing y tutoriales.
     menu_title: searchworkd.pro
     languageCode: es-ES
     lang_name: español
     description: searchworld.pro está dedicado a producir las últimas noticias de búsqueda, las mejores guías y procedimientos para la comunidad de SEO y marketing.
   fr:
-    baseURL: https://example4.com/
+    #    baseURL: https://example4.com/
     title: searchworkd.pro - SEO, actualités et tutoriels de marketing de recherche
     menu_title: searchworkd.pro
     languageCode: fr-FR
@@ -51,6 +52,7 @@ params:
   cse: 002181638325239780683:wuepawcebtk
   gtm: GTM-PQPN62S
   static_domain_prefix: /
+  homepage_publish_date: true
   newsletter:
     show: false
   single_page:
@@ -65,6 +67,10 @@ params:
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/5778/WeightLoss5.jpg
       banner_url: https://mixi.mn/?a=146186&c=30&p=r&s2=bottom-banner
     side_ad:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
+      banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+    below_related:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
