@@ -32,10 +32,11 @@ params:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+    below_related:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
+      banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
   homepage_publish_date: false
   sitemap:
     changefreq: monthly
-  sections:
-    first_title: More celeb nude photoes
-    second_title: Even more nude celeb photos for everyone
   css_theme: nfp
