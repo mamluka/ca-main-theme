@@ -42,7 +42,9 @@
 
 </span>
             </div>
+            {{ if $.Site.Params.multilang.share_sitemap_index }}
             {{ partial "lang-selection.html" . }}
+            {{ end }}
         </div>
     </div>
 </footer>
