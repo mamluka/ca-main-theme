@@ -1,10 +1,1 @@
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="{{ $.Site.Params.in_post_ad.pub_id }}"
-     data-ad-slot="{{ $.Site.Params.in_post_ad.slot_id }}"></ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+{{ partial (printf "ads/%s-ad-unit.html" $.Site.Params.ads.below_related.partial) $.Site.Params.ads.below_related }}
