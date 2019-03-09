@@ -9,7 +9,7 @@
         <loc>{{ $page.Permalink }}</loc>
         <lastmod>{{ safeHTML ( $page.PublishDate.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
         <changefreq>{{ $.Site.Params.sitemap.changefreq }}</changefreq>
-        <priority>{{ if eq $page.Kind "page" }}1{{ else}}2{{ end }}</priority>
+        <priority>{{ if eq $page.Kind "page" }}1{{ else}}0.5{{ end }}</priority>
         {{ if $.Site.Params.multilang.share_sitemap_index }}
         {{ if .LangGroupId }}
         {{ range $.Site.GetAllLangVersionsPageIds .LangGroupId }}

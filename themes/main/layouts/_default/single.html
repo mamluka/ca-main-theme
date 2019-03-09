@@ -19,7 +19,8 @@
                     {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
                     {{ range .Params.tags }}
                     <span class="tag">
-                            <a href="{{ $.Site.BaseURL}}tags/{{ . | urlize }}">{{ . }}</a>
+                        {{ $tag := $.Site.getLitePageByHumanId . }}
+                            <a href="{{ $tag.Parmalink }}">{{ $tag.Title }}</a>
                         </span>
                     {{ end }}
                     <hr/>
