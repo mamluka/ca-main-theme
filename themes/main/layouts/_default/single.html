@@ -20,7 +20,7 @@
                     {{ range .Params.tags }}
                     <span class="tag">
                         {{ $tag := $.Site.GetLitePageByPageHumanId . }}
-                            <a href="{{ $tag.Parmalink }}">{{ $tag.Title }}</a>
+                            <a href="{{ $tag.Permalink }}">{{ $tag.Title }}</a>
                         </span>
                     {{ end }}
                     <hr/>
