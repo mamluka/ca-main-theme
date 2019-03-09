@@ -19,7 +19,7 @@
                     {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
                     {{ range .Params.tags }}
                     <span class="tag">
-                        {{ $tag := $.Site.getLitePageByHumanId . }}
+                        {{ $tag := $.Site.GetLitePageByHumanId . }}
                             <a href="{{ $tag.Parmalink }}">{{ $tag.Title }}</a>
                         </span>
                     {{ end }}
