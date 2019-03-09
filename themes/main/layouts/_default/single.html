@@ -20,7 +20,11 @@
                     {{ range .Params.tags }}
                     <span class="tag">
                         {{ $tag := $.Site.GetLitePageByPageHumanId . }}
-                            {{ $tag | jsonify }}
+                            {{ if $tag }}
+                            <a href="{{ $tag.Permalink }}">{{ $tag.Title }}</a>
+                            {{ else }}
+                            <span>{{ . }}</span>
+                            {{ end }}
                         </span>
                     {{ end }}
                     <hr/>
