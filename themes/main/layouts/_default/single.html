@@ -20,7 +20,7 @@
                     {{ range .Params.tags }}
                     <span class="tag">
                         {{ $tag := $.Site.GetLitePageByPageHumanId . }}
-                            {{ $tag }}
+                            {{ $tag | jsonify }}
                         </span>
                     {{ end }}
                     <hr/>
