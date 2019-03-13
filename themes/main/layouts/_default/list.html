@@ -2,6 +2,10 @@
 <meta name="robots" content="index,follow"/>
 {{ end }}
 
+{{ define "description" }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+
 {{ define "paginator" }}
 {{ if .InitPaginator }}
 {{ if $.Site.Params.homepage_publish_date }}
