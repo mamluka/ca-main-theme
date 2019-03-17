@@ -28,6 +28,9 @@
                         </span>
                     {{ end }}
                     <hr/>
+                    <p>
+                        {{ partial "related-articles-ad-unit.html" . }}
+                    </p>
                     {{ if .Params.related_posts_ids }}
                     {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
                     <h1 class="is-size-3">{{ T "read_this_next" }}</h1>

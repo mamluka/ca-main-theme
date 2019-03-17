@@ -24,6 +24,7 @@
 {{ block "before_body" .}}
 {{ end }}
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}static/css/all.css"/>
+<script src="{{ .Site.Params.static_domain_prefix }}static/js/app.js"></script>
 <body class="{{ .Site.Params.css_theme }}">
 <style>
     .hidden {
@@ -77,6 +78,6 @@
     {{ partial "footer" . }}
     {{ end }}
 </div>
-<script src="{{ .Site.Params.static_domain_prefix }}static/js/app.js"></script>
+
 </body>
 </html>

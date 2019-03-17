@@ -59,9 +59,8 @@ params:
     partial: content
   ads:
     top_ad:
-      partial: morenitch
-      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/5354/blackwolf-generic-728x90.png
-      banner_url: https://mixi.mn/?a=146186&c=5198&p=r&s3=top-banner
+      partial: dynamic
+      location: top
     bottom_ad:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/5778/WeightLoss5.jpg
@@ -74,11 +73,13 @@ params:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+    in_post:
+      partial: morenitch
+      banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
+      banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
   css_theme: regular
   sitemap:
     changefreq: monthly
-  in_post_ad:
-    pub_id: ca-pub-3609124934128625
-    slot_id: 4432820139
+
   multilang:
     share_sitemap_index: true

@@ -7,6 +7,8 @@ import $ from '../../../../node_modules/jquery/dist/jquery';
 import '../../../../node_modules/jquery.mmenu/dist/jquery.mmenu.all';
 import '../../../../node_modules/jquery-modal/jquery.modal';
 
+window.jQuery = $;
+
 $(function () {
     $('#slide-mega-menu').mmenu({
         navbar: {
@@ -41,5 +43,4 @@ $(function () {
     $('#verify-modal').on($.modal.OPEN, function () {
         unlock();
     });
-
 });
