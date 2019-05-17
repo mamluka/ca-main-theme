@@ -1,0 +1,25 @@
+{{ $first_large_post := .}}
+<div class="large-post">
+    <div class="container is-fluid is-gapless">
+        <div class="columns">
+            <div class="column">
+                <div class="post" style="background-image: url({{  $first_large_post.Image }})">
+                    <article class="has-text-centered">
+                        <a href="{{ $first_large_post.Permalink }}">
+                            <h1 class="title has-text-white is-family-secondary">
+                                {{ $first_large_post.Title }}
+                            </h1>
+                        </a>
+                        <div class="has-text-white">
+                            {{ $first_large_post.Summary }}
+                        </div>
+                        <div>
+                            <a href="{{ $first_large_post.Permalink }}" class="has-text-weight-bold read-more bigger button is-black is-uppercase">{{ T "read_more" }}</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

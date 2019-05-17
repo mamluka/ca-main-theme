@@ -25,6 +25,8 @@
 </head>
 {{ block "before_body" .}}
 {{ end }}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="{{ .Site.Params.static_domain_prefix }}static/css/all.css"/>
 <script src="{{ .Site.Params.static_domain_prefix }}static/js/app.js"></script>
 <body class="{{ .Site.Params.css_theme }}">
@@ -45,36 +47,29 @@
         s.parentNode.insertBefore(gcse, s);
     })();
 </script>
-<!--<div style="position: absolute;padding-left: 110px;left:0;top:0;z-index: 1000;background-color: white">-->
-<!--<gcse:search></gcse:search>-->
-<!--</div>-->
 {{ end }}
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHH563R"
+    <iframe src="https://www.googletagmanager.com/ns.html?id={{ $.Site.Params.gtm }}"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 {{ partialCached "mega-menu-lite.html" . }}
 
 <div id="panel">
-    <main>
-
     {{ block "header" . }}
         {{ partial "header" . }}
     {{ end }}
 
-    {{ block "top-ad-unit" .}}
-    {{ partialCached "top-ad-unit" . }}
-    {{ end }}
+    <!--{{ block "top-ad-unit" .}}-->
+    <!--{{ partialCached "top-ad-unit" . }}-->
+    <!--{{ end }}-->
 
     {{ block "main" . }}
     {{ end }}
 
-    {{ block "bottom-ad-unit" .}}
-    {{ partialCached "bottom-ad-unit" . }}
-    {{ end }}
-
-    </main>
+    <!--{{ block "bottom-ad-unit" .}}-->
+    <!--{{ partialCached "bottom-ad-unit" . }}-->
+    <!--{{ end }}-->
 
     {{ block "footer" . }}
     {{ partial "footer" . }}

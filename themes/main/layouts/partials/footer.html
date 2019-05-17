@@ -1,50 +1,66 @@
-<footer class="footer">
-    <div class="container is-fluid">
-        <div class="columns is-multiline">
-            <div class="column is-4">
-                <div class="columns is-multiline">
-                    <div class="column is-6">
-                        <a href="/pages/privacy">{{ T "privacy" }}</a>
-                    </div>
-                    <div class="column is-6">
-                        <a href="/pages/tac">{{ T "tac" }}</a>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-4">
-                {{ if .Site.Params.newsletter.show }}
-                <h1 class="is-size-3 has-text-weight-bold">
-                    Get our wellness newsletter
-                </h1>
-                <br/>
-                <h4 class="has-text-weight-semibold">Fitness and nutrition tips, health news, and more.
-
-                </h4>
-                <br/>
-
-                <div class="field">
-
+<section>
+    <div class="above-footer container is-fluid">
+        <div class="columns is-multiline is-vcentered">
+            <div class="column is-6 newsletter has-text-centered">
+                <h2 class="is-size-5 has-text-weight-bold title">{{ T "sign_up_newsletter"}}</h2>
+                <div class="field has-addons has-addons-centered">
                     <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
+                        <input class="input" type="text" placeholder="Your email">
                     </div>
-                </div>
-                <div class="field">
-
                     <div class="control">
-                        <button class="button">Subscribe</button>
+                        <a class="button is-black">
+                            {{ T "sign_up_now" }}
+                        </a>
                     </div>
                 </div>
-                {{ end }}
             </div>
-            <div class="column is-4 ">
-<span class="copy-rights">
-    © {{.Site.Params.Title }} - {{ dateFormat "2006" now }}
-
-</span>
+            <div class="column is-6 has-text-centered">
+                <h3 class="is-size-5 has-text-weight-bold title">Follow us on Instagram</h3>
+                <a class="bigger button is-black is-uppercase">{{ T "follow_now" }}</a>
             </div>
-            {{ if $.Site.Params.multilang.share_sitemap_index }}
-            {{ partial "lang-selection.html" . }}
-            {{ end }}
         </div>
     </div>
-</footer>
+</section>
+<div class="footer2">
+    <div class="container is-fluid">
+        <div class="columns is-multiline is-vcentered">
+            <div class="column is-2 is-size-4 has-text-centered">
+                    <span class="icon has-text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                <span class="icon has-text-white">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                <span class="icon has-text-white">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+            </div>
+            <div class="column is-8">
+                <div class="links">
+                    <a href="/pages/privacy">{{ T "privacy" }}</a>
+                    <a href="/pages/tac">{{ T "tac" }}</a>
+                    <a href="/pages/tac">{{ T "careers" }}</a>
+                    <a href="/pages/tac">{{ T "sitemap" }}</a>
+                    <a href="/pages/tac">{{ T "about_us" }}</a>
+                    <a href="/pages/tac">{{ T "advertise" }}</a>
+                </div>
+            </div>
+            <div class="column is-12 has-text-centered">
+                    <span class="has-text-white is-size-7 has-text-weight-bold">
+                        {{ T "also_available_in" }}:
+                    </span>
+            </div>
+            <div class="column is-12 has-text-centered">
+                {{ if .Params.lang_group_id }}
+                {{ range $.Site.GetAllLangVersionsPageIds .Params.lang_group_id}}
+                <a href="{{ .Permalink }}" class="button is-primary is-inverted is-outlined is-small">{{ $lang:= index $.Site.GetAllLanguages .Lang }}{{ $lang.lang_name}}</a>
+                {{ end }}
+                {{ else }}
+                {{ range $key,$value := $.Site.GetAllLanguages }}
+                <a href="{{ $.Site.BaseURL}}{{ $key }}" class="button is-primary is-inverted is-outlined is-small">{{ $value.lang_name }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

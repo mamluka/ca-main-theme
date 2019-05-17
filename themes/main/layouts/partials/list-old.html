@@ -1,0 +1,161 @@
+<main>
+    {{ $paginator := .Paginator }}
+    {{ $lite_pages := $paginator.BulkLitePages .Site}}
+    {{ $lite_pages_length := len $lite_pages }}
+    {{ $first_large_post := index $lite_pages 0 }}
+    {{ $second_4_posts := .Site.LitePagesSlice $lite_pages 1 5 }}
+    {{ $third_ten_posts := .Site.LitePagesSlice $lite_pages 5 10 }}
+    {{ $fourth_rest_posts := .Site.LitePagesSlice $lite_pages 15 1000 }}
+
+    <div class="section">
+        <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-offset-1 is-10">
+                    <div class="columns is-multiline">
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                            <ul>
+                                {{ range .AllAboveSectionsPageIds }}
+                                {{ $page := $.Site.GetLitePageByPageId . }}
+                                {{ if $page }}
+                                <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+                                {{ end }}
+                                {{ end }}
+                            </ul>
+                        </nav>
+                        <div class="column is-12">
+                            <div class="content">
+                                <h1>{{ .Title }}</h1>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <article>
+                                <a href="{{ $first_large_post.Permalink }}">
+                                    <figure class="image">
+                                        <img src="{{ $first_large_post.Image }}">
+                                    </figure>
+                                </a>
+                                <div class="content">
+                                    <a href="{{ $first_large_post.Permalink }}">
+                                        <h1>{{ $first_large_post.Title }}</h1>
+                                    </a>
+                                    <p>
+                                        {{ $first_large_post.Summary }}
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="column is-6">
+                            {{ range $second_4_posts}}
+                            <article class="media">
+                                <figure class="media-left">
+                                    <a href="{{ .Permalink }}">
+                                        <p class="image is-128x128">
+                                            <img class="section-regular-image" src="{{ .Image }}">
+                                        </p>
+                                    </a>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <a href="{{ .Permalink }}">
+                                            <h4>
+                                                {{ .Title }}
+                                            </h4>
+                                        </a>
+                                        <p>
+                                            {{ .Summary }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ if gt $lite_pages_length 5 }}
+            <div class="columns is-multiline">
+                <div class="column is-12">
+                    <h1 class="is-size-4 has-text-weight-bold">{{ T "first_list_title" }}</h1>
+                    <hr/>
+                </div>
+                <div class="column is-8">
+                    {{ range $third_ten_posts }}
+                    <article class="media">
+                        <a href="{{ .Permalink }}">
+                            <figure class="media-left mobile-thumb">
+                                <img class="section-medium-image" src="{{ .Image }}">
+                            </figure>
+                        </a>
+                        <div class="media-content">
+                            <div class="content">
+                                <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                                <br>
+                                {{ .Summary }}
+                            </div>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+            {{ if gt $lite_pages_length 15 }}
+            <div class="columns is-multiline">
+                <div class="column is-12">
+                    <h1 class="is-size-4 has-text-weight-bold">{{ T "second_list_title" }}</h1>
+                    <hr/>
+                </div>
+                {{range $fourth_rest_posts }}
+                <div class="column is-6">
+                    <article class="media">
+                        <div class="media-left">
+                            <a href="{{ .Permalink }}">
+                                <figure class="image is-64x64">
+                                    <img class="section-small-image" src="{{ .Image }}" alt="Image">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <a href="{{ .Permalink }}">
+                                    <h4>{{ .Title }}</h4>
+                                </a>
+                                <p>
+                                    {{ .Summary }}
+                                </p>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <hr/>
+        {{ if gt .Paginator.TotalPages 1 }}
+        <div class="columns">
+            <div class="column is-offset-2 is-8">
+                <nav class="pagination is-centered is-rounded is-large" role="navigation" aria-label="pagination">
+                    {{ if .Paginator.HasPrev }}
+                    <a href="{{ .Paginator.Prev.URL }}" class="pagination-previous">{{ T "back" }}</a>
+                    {{ end }}
+                    {{ if .Paginator.HasNext }}
+                    <a href="{{ .Paginator.Next.URL }}" class="pagination-next">{{ T "next"}}</a>
+                    {{ end }}
+                    <ul class="pagination-list">
+                        {{ $pagersCollection := .Paginator.AroundPagers .Paginator.PageNumber 3 6}}
+                        {{ range $index,$val := $pagersCollection }}
+                        {{ range $val }}
+                        <li><a href="{{ .URL }}" class="pagination-link {{ if eq .PageNumber $.Paginator.PageNumber }}is-current{{ end }}" aria-label="Goto page #{.PageNumber}">{{ .PageNumber }}</a></li>
+                        {{ end }}
+                        {{ if lt $index (sub (len $pagersCollection) 1) }}
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        {{ end }}
+                        {{ end}}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</main>

@@ -1,5 +1,6 @@
-import '../../../../node_modules/bulma/bulma.sass';
+
 import '../../../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css';
+import '../../../../node_modules/jquery-modal/jquery.modal.css';
 
 import '../styles/index.scss';
 

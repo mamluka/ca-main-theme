@@ -7,7 +7,7 @@
 {{ end }}
 
 {{ define "description" }}
-<meta name="description" content="{{ .Site.Params.description }}" />
+<meta name="description" content="{{ .Site.Params.description }}"/>
 {{ end }}
 
 {{ define "paginator" }}
@@ -21,5 +21,32 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ partial "list.html" . }}
+<div class="container is-fluid">
+    <div class="columns is is-multiline is-gapless">
+        <div class="column is-12">
+            <div class="sections-nav-title has-text-centered">
+                <h1 class="has-text-weight-bold is-size-2">{{ .Title }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="full-black-width">
+    <div class="container is-fluid">
+        <div class="columns is is-multiline is-gapless">
+            <div class="column is-12 is-vcentered ">
+                <div class="sections-nav-links">
+                    {{ if gt (len $.SubSectionsPageIds) 0 }}
+                    {{ range first 6 $.SubSectionsPageIds }}
+                    {{ $page := $.Site.GetLitePageByPageIdByString . }}
+                    {{ if $page }}
+                    <a class="has-text-white has-text-weight-bold is-size-7 is-uppercase" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                    {{ end}}
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ partial "list.html" . }}
 {{ end }}

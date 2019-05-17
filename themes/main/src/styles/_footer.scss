@@ -1,0 +1,30 @@
+.newsletter {
+  border: 10px solid black;
+  padding: 2rem;
+}
+
+.above-footer {
+  padding: 5rem 0;
+
+  .title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.footer2 {
+  background: black;
+  padding: 4rem 5rem;
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: white;
+      font-size: 0.85rem;
+
+    }
+
+  }
+
+}

@@ -13,11 +13,21 @@ $brand-orange-1: #F6A755;
 $price-color-1: #B32D18;
 $stock-color-1: #189133;
 
+$family-sans-serif: 'Roboto', sans-serif;
+$family-secondary: 'Merriweather', serif;
+
+@import '../../../../node_modules/bulma/bulma';
+
 @import '../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint';
-@import '../../../../node_modules/jquery-modal/jquery.modal.min.css';
 
 @import "loader";
 @import "themes/nfp";
+@import "header";
+@import "sections";
+@import "footer";
+@import "common";
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:400,500|Volkhov');
 
 .c-navbar {
   border-bottom: $gray-2 1px solid;
@@ -25,11 +35,9 @@ $stock-color-1: #189133;
 
 .top-location {
   background-color: $gray-1;
-  padding: 10px;
 }
 
 .bottom-location {
-  padding: 10px;
 }
 
 .article {

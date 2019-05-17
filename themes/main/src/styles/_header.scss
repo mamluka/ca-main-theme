@@ -1,0 +1,30 @@
+.top-nav {
+  .bars-icon {
+    border: 2rem solid #FCD600;
+    font-size: 1.5rem;
+
+  }
+
+  .search-icon {
+    //border: 2rem solid white;
+    //font-size: 1.5rem;
+
+  }
+
+  .mid-header {
+    //border: 2rem solid white;
+    font-family: 'Volkhov', serif;
+    font-size: 1.5rem;
+  }
+}
+
+.sections-nav-title {
+  padding: 4rem 0 3rem 0;
+}
+
+.sections-nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 1.5rem 5rem;
+}

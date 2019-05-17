@@ -24,3 +24,19 @@ other = "Altro da leggere"
 other = "Sottosezioni"
 [tac]
 other = "Termini e condizioni"
+
+
+[follow_now]
+other = "Follow now"
+[sign_up_newsletter]
+other = "Signup for our newsletter"
+[sign_up_now]
+other = "Sign up now"
+[careers]
+other = "Careers"
+[sitemap]
+other = "Sitemap"
+[about_us]
+other = "About us"
+[advertise]
+other = "Advertise"
