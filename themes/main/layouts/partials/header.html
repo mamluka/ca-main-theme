@@ -1,94 +1,34 @@
-<!--<nav class="navbar c-navbar" role="navigation" aria-label="main navigation">-->
-    <!--<div class="navbar-brand is-hidden-mobile">-->
-        <!--<a class="navbar-item" href="{{ .Site.BaseURL }}">-->
-            <!--{{ .Site.Params.menu_title }}-->
-        <!--</a>-->
-    <!--</div>-->
-
-    <!--<div class="navbar-menu" style="display: block">-->
-        <!--<div class="navbar-start is">-->
-            <!--<div class="navbar-item">-->
-                <!--{{ $homepage := .LiteParent }}-->
-                <!--{{ if .IsPage }}-->
-                <!--{{ $homepage = $.Site.GetLitePageByPageId (index (last 3 .AllAboveSectionsPageIds ) 0) }}-->
-                <!--{{ end}}-->
-                <!--<nav class="mega-menu">-->
-                    <!--<ul>-->
-                        <!--<li>-->
-                            <!--<a href="#slide-mega-menu" class="menu-btn">-->
-                                <!--<span></span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--{{ if gt (len $.SubSectionsPageIds) 0 }}-->
-                        <!--<li><a href="{{ $.Permalink }}">{{ T "subsections" }}</a>-->
-                            <!--<ul>-->
-                                <!--{{ range $.SubSectionsPageIds }}-->
-                                <!--{{ $subsection := $.Site.GetLitePageByPageIdByString .}}-->
-                                <!--{{ if $subsection }}-->
-                                <!--<li>-->
-                                    <!--<a href="{{ $subsection.Permalink }}">-->
-                                        <!--{{ $subsection.Title }}-->
-                                    <!--</a>-->
-                                <!--</li>-->
-                                <!--{{ end }}-->
-                                <!--{{ end }}-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                        <!--{{ end }}-->
-                        <!--{{ if or .IsSection .IsPage }}-->
-                        <!--{{ if $homepage }}-->
-                        <!--{{ range first 6 $homepage.SubSectionsPageIds }}-->
-                        <!--{{ $page := $.Site.GetLitePageByPageIdByString . }}-->
-                        <!--{{ if $page }}-->
-                        <!--<li>-->
-                            <!--<a href="{{ $page.Permalink }}">-->
-                                <!--{{ $page.Title }}-->
-                            <!--</a>-->
-                            <!--<ul>-->
-                                <!--{{ range $page.SubSectionsPageIds }}-->
-                                <!--{{ $child_page := $.Site.GetLitePageByPageIdByString . }}-->
-                                <!--{{ if $child_page }}-->
-                                <!--<li>-->
-                                    <!--<a href="{{ $child_page.Permalink }}">-->
-                                        <!--{{ $child_page.Title }}-->
-                                    <!--</a>-->
-                                <!--</li>-->
-                                <!--{{ end }}-->
-                                <!--{{ end }}-->
-
-                            <!--</ul>-->
-                        <!--</li>-->
-                        <!--{{ end }}-->
-                        <!--{{ end }}-->
-                        <!--{{ end }}-->
-                        <!--{{ end }}-->
-
-                    <!--</ul>-->
-                <!--</nav>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</nav>-->
 <nav role="navigation" aria-label="main navigation">
-    <div class="container is-fluid top-nav">
-        <div class="columns is-gapless is-marginless is-vcentered">
-            <div class="column is-4 has-text-left">
+    <div class="container is-desktop top-nav">
+        <div class="columns is-mobile is-gapless is-marginless is-vcentered">
+            <div class="column is-1-desktop is-1-mobile has-text-left">
                 <div class="bars-border">
                     <a href="#slide-mega-menu">
-                        <span class="bars-icon icon has-text-black" >
+                        <span class="bars-icon icon has-text-black">
                             <i class="fas fa-bars"></i>
                         </span>
                     </a>
                 </div>
             </div>
-            <div class="column is-4 has-text-centered">
-                <div class="mid-header is-uppercase is-bold">AllHealth.PRO</div>
+            <div class="column is-10-desktop is-10-mobile has-text-centered">
+                <a class="has-text-black" href="{{ .Site.BaseURL }}">
+                    <div class="mid-header is-uppercase is-bold">AllHealth.PRO</div>
+                </a>
             </div>
-            <div class="column is-4 has-text-right">
-                <span class="search-icon icon has-text-black">
+            <div class="column is-1-desktop is-1-mobile has-text-centered-mobile has-text-right-desktop">
+                <span class="search-icon icon has-text-centered">
                     <i class="fas fa-search"></i>
                 </span>
             </div>
         </div>
     </div>
 </nav>
+<div class="modal" id="search-box-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="search-box">
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <div class="close" id="search-box-close"></div>
+        </div>
+    </div>
+</div>

@@ -40,3 +40,7 @@ other = "Sitemap"
 other = "About us"
 [advertise]
 other = "Advertise"
+[keywords]
+other = "Keywords"
+[contact_us]
+other = "Contact us"

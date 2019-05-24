@@ -1,0 +1,15 @@
+.width-container {
+  &.bottom {
+    margin-top: 0.75rem;
+  }
+  padding: 1rem;
+  background-color: rgba(31, 31, 31, 0.07);
+}
+
+.a {
+  &.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

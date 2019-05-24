@@ -4,10 +4,10 @@
 {{ define "main" }}
 <main>
     <div class="section">
-        <div class="container is-fluid">
-            <div class="columns">
+        <div class="container is-desktop single-page">
+            <div class="columns main-content">
                 <div class="column is-8">
-                    <nav class="breadcrumb" aria-label="breadcrumbs">
+                    <nav class="breadcrumb is-small has-dot-separator" aria-label="breadcrumbs">
                         <ul>
                             {{ range .AllAboveSectionsPageIds }}
                             {{ $page := $.Site.GetLitePageByPageId . }}
@@ -19,112 +19,61 @@
                     </nav>
 
                     <div class="content">
-
                         {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
+                    </div>
+                    <div>
+                        <span class="is-size-7 has-text-weight-bold is-black">{{ T "keywords" }}:</span>
                         {{ range .Params.tags }}
-                        <span class="tag">
                         {{ $tag := $.Site.GetLitePageByPageHumanId . }}
-                            {{ if $tag }}
-                            <a href="{{ $tag.Permalink }}">{{ $tag.Title }}</a>
-                            {{ else }}
-                            <span>{{ . }}</span>
-                            {{ end }}
-                        </span>
-                        {{ end }}
-                        <hr/>
-                        <p>
-                            {{ partial "related-articles-ad-unit.html" . }}
-                        </p>
-                        {{ if .Params.related_posts_ids }}
-                        {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
-                        <h1 class="is-size-3">{{ T "read_this_next" }}</h1>
-                        {{ range .Params.related_posts_ids }}
-                        {{ $page := $.Site.GetLitePageByPageHumanId . }}
-                        {{ if $page }}
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <a href="{{ $page.Permalink }}">
-                                        <figure class="image is-128x128">
-                                            <img src="{{ $page.Image }}" alt="Image">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-
-                                        <a href="{{ $page.Permalink }}">
-                                            <h2>{{ $page.Title }}</h2>
-                                        </a>
-
-                                        <br/>
-                                        {{ $page.Summary }}
-                                        <br/>
-                                        <br/>
-                                        <a href="{{ $page.Permalink }}" class="is-bold">
-                                            {{ T "read_more" }} ->
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        {{ end }}
-                        {{ end }}
+                        {{ if $tag }}
+                        <a class="tag-link is-size-7" href="{{ $tag.Permalink }}">{{ $tag.Title }}</a>,
                         {{ end }}
                         {{ end }}
                     </div>
+
+                    <hr/>
+                    <p>
+                        {{ partial "related-articles-ad-unit.html" . }}
+                    </p>
                 </div>
-                <div class="column is-4">
-                    <div class="columns is-multiline">
+                <div class="column is-4 sidebar is-hidden-mobile">
+                    <div class="columns is-multiline sidebar__inner">
 
                         <div class="column is-12">
                             <div class="side-location has-text-centered">
                                 {{ partial "side-ad-unit.html" .}}
                             </div>
                         </div>
-                        {{ if .Params.related_posts_ids }}
-                        {{ if (gt ( len .Params.related_posts_ids ) 0 ) }}
-                        <div class="column is-12">
-
-                            <h1 class="is-size-3">{{ T "related_stories" }}</h1>
-                            <hr/>
-
-                            {{ range .Params.related_posts_ids }}
-                            {{ $page := $.Site.GetLitePageByPageHumanId . }}
-                            {{ if $page }}
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <a href="{{ $page.Permalink}}">
-                                            <figure class="image is-64x64">
-                                                <img src="{{ $page.Image}}" alt="Image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong><a href="{{ $page.Permalink}}"> {{ $page.Title }}</a></strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            {{ end }}
-                            {{ end }}
-                        </div>
-                        <div class="column is-12">
-                            <div class="has-text-centered">
-                                {{ partial "below-related-ad-unit.html" .}}
-                            </div>
-                        </div>
-                        {{ end }}
-                        {{ end }}
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    {{ if gt (len .Params.related_posts_ids) 0 }}
+    <section class="trending">
+        <div class="container is-desktop">
+            <div class="columns is-multiline is-vcentered is-gapless">
+                <div class="column is-12 has-text-centered is-bold">
+                    <h1 class="header-title is-uppercase">{{ T "read_this_next" }}</h1>
+                </div>
+                {{ range .Params.related_posts_ids }}
+                {{ $page := $.Site.GetLitePageByPageHumanId . }}
+                {{ if $page }}
+                <div class="column is-4-desktop is-offset-1-mobile is-10-mobile">
+                    <div class="parent">
+                        <div class="trending-image" style="background-image: url({{ $page.Image }})">
+                        </div>
+                        <div class="title">
+                            <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
 </main>
 {{ end }}

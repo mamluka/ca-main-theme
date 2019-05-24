@@ -1,7 +1,7 @@
-<div class="top-location">
-    <div class="container">
-        <div class="columns is-gapless">
-            <div class="column has-text-centered">
+<div class="width-container">
+    <div class="container is-fluid">
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-12">
                 {{ partial (printf "ads/%s-ad-unit.html" $.Site.Params.ads.top_ad.partial) $.Site.Params.ads.top_ad }}
             </div>
         </div>

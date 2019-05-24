@@ -2,7 +2,57 @@
   padding: 1.25rem 2.5rem !important;
 
 }
+
 .full-black-width {
   width: 100%;
   background-color: black;
+}
+
+.mobile-margin {
+  @include breakpoint($desktop) {
+    margin: 0 $gap;
+  }
+}
+
+.pages {
+  padding: 3rem 0;
+}
+
+
+.search-box {
+  margin: 0 $gap/2;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  $cross-size: 3rem;
+  $cross-color: white;
+
+  .close {
+    cursor: pointer;
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    width: $cross-size;
+    height: $cross-size;
+    opacity: 0.8;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: $cross-size;
+    content: ' ';
+    height: $cross-size;
+    width: 4px;
+    background-color: $cross-color;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
 }

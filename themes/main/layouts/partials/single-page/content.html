@@ -1,9 +1,9 @@
+<h3 class="has-text-weight-bold is-size-7"><strong>{{ T "published_on" }} {{ dateFormat "2 January 2006" .Params.publishdate }}</strong></h3>
 <div class="content">
-    <h1 class="is-family-secondary">{{ .Title }}</h1>
+    <h1 class="is-family-secondary is-size-1 page-title">{{ .Title }}</h1>
 </div>
-<div class="content">
-    <strong>{{ T "published_on" }} {{ dateFormat "2 January 2006" .Params.publishdate }}</strong>
-</div>
-<div>
+
+<img src="{{ .Params.image }}">
+<div class="page-content">
     {{ .Content }}
 </div>

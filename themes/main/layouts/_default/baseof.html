@@ -37,8 +37,8 @@
 </style>
 {{ if .Site.Params.cse }}
 <script>
-    (function () {
-        var cx = '{{ .Site.Params.cse }}';
+    (function() {
+        var cx = '002181638325239780683:8une2qwxzwm';
         var gcse = document.createElement('script');
         gcse.type = 'text/javascript';
         gcse.async = true;
@@ -60,16 +60,16 @@
         {{ partial "header" . }}
     {{ end }}
 
-    <!--{{ block "top-ad-unit" .}}-->
-    <!--{{ partialCached "top-ad-unit" . }}-->
-    <!--{{ end }}-->
+    {{ block "top-ad-unit" .}}
+    {{ partialCached "top-ad-unit" . }}
+    {{ end }}
 
     {{ block "main" . }}
     {{ end }}
 
-    <!--{{ block "bottom-ad-unit" .}}-->
-    <!--{{ partialCached "bottom-ad-unit" . }}-->
-    <!--{{ end }}-->
+    {{ block "bottom-ad-unit" .}}
+    {{ partialCached "bottom-ad-unit" . }}
+    {{ end }}
 
     {{ block "footer" . }}
     {{ partial "footer" . }}

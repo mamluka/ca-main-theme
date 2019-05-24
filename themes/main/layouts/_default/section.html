@@ -21,7 +21,7 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="container is-fluid">
+<div class="container is-dekstop">
     <div class="columns is is-multiline is-gapless">
         <div class="column is-12">
             <div class="sections-nav-title has-text-centered">
@@ -30,23 +30,43 @@
         </div>
     </div>
 </div>
+{{ if gt (len $.SubSectionsPageIds) 0 }}
 <div class="full-black-width">
-    <div class="container is-fluid">
-        <div class="columns is is-multiline is-gapless">
+    <div class="container is-dekstop">
+        <div class="columns is-multiline is-gapless">
             <div class="column is-12 is-vcentered ">
                 <div class="sections-nav-links">
-                    {{ if gt (len $.SubSectionsPageIds) 0 }}
                     {{ range first 6 $.SubSectionsPageIds }}
                     {{ $page := $.Site.GetLitePageByPageIdByString . }}
                     {{ if $page }}
-                    <a class="has-text-white has-text-weight-bold is-size-7 is-uppercase" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                    <a class="has-text-white has-text-weight-bold is-size-6-desktop is-size-5-mobile is-uppercase" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
                     {{ end}}
-                    {{ end }}
                     {{ end }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{ end }}
 {{ partial "list.html" . }}
+<div class="container is-dekstop">
+    <div class="columns is-multiline">
+        <div class="column is-12 has-text-centered">
+            <h2 class="is-size-4-desktop is-size-4-mobile">{{ T "subsections" }}</h2>
+        </div>
+        <div class="column is-12">
+            <div class="subsections-list">
+                {{ range $.SubSectionsPageIds }}
+                {{ $page := $.Site.GetLitePageByPageIdByString . }}
+                {{ if $page }}
+                <span class="tag is-black">
+                <a class="has-text-white has-text-weight-bold is-size-7-desktop is-size-7-mobile is-uppercase" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+                </span>
+
+                {{ end}}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}

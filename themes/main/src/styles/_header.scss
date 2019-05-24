@@ -9,6 +9,8 @@
     //border: 2rem solid white;
     //font-size: 1.5rem;
 
+    cursor: pointer;
+
   }
 
   .mid-header {
@@ -23,8 +25,24 @@
 }
 
 .sections-nav-links {
+  @include breakpoint($desktop) {
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  align-items: center;
+  flex-direction: column;
   display: flex;
   justify-content: space-evenly;
   background-color: black;
   padding: 1.5rem 5rem;
+
+  a {
+    @include breakpoint($desktop) {
+      border-bottom: none;
+      margin: auto;
+    }
+    border-bottom: 1px solid white;
+    margin: 0.5rem 0;
+  }
 }

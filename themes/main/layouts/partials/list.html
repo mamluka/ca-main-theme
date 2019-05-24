@@ -10,10 +10,10 @@
 
 {{ partial "large-post.html" $first_large_post }}
 <section class="below-hero">
-    <div class="container is-fluid">
+    <div class="container is-desktop">
         <div class="columns">
             {{ range $second_3_posts }}
-            <div class="column">
+            <div class="column is-size-4-desktop is-offset-1-mobile is-10-mobile">
                 <article class="has-text-centered">
                     <a href="{{ .Permalink }}">
                         <h2 class="has-text-black is-size-5">
@@ -28,7 +28,7 @@
 </section>
 {{ if gt (len $third_12_posts) 0 }}
 <section class="article-list">
-    <div class="container is-fluid">
+    <div class="container is-desktop">
         <div class="columns is-multiline">
             <div class="column is-12 is-bold is-uppercase has-text-centered">
                 <h1 class="article-list-title is-family-secondary">
@@ -36,21 +36,7 @@
                 </h1>
             </div>
             {{ range $third_12_posts }}
-            <div class="column is-4">
-                <a href="{{ .Permalink }}">
-                    <div class="image" style="background-image: url({{ .Image }})">
-                    </div>
-                </a>
-                <a href="{{ .Permalink }}">
-                    <h2 class="title has-text-centered">
-                        {{ .Title }}
-                    </h2>
-                </a>
-                <div class="summary has-text-centered">
-                    {{ .Summary }}
-                </div>
-
-            </div>
+            {{ partial "article-item.html" .}}
             {{ end }}
         </div>
     </div>
@@ -61,7 +47,7 @@
 {{ end }}
 {{ if gt (len $fourth_rest_posts) 0 }}
 <section class="article-list">
-    <div class="container is-fluid">
+    <div class="container is-desktop">
         <div class="columns is-multiline">
             <div class="column is-12 is-bold is-uppercase has-text-centered">
                 <h1 class="article-list-title is-family-secondary">
@@ -69,18 +55,7 @@
                 </h1>
             </div>
             {{ range $fourth_rest_posts }}
-            <div class="column is-4">
-                <div class="image" style="background-image: url({{ .Image }})">
-
-                </div>
-                <h2 class="title has-text-centered">
-                    {{ .Title }}
-                </h2>
-                <div class="summary has-text-centered">
-                    {{ .Summary }}
-                </div>
-
-            </div>
+            {{ partial "article-item.html" .}}
             {{ end }}
         </div>
     </div>
@@ -88,19 +63,18 @@
 {{ end }}
 {{ if gt (len $trending) 0 }}
 <section class="trending">
-    <div class="container is-fluid">
+    <div class="container is-desktop">
         <div class="columns is-multiline is-vcentered">
             <div class="column is-12 has-text-centered is-bold">
                 <h1 class="header-title is-uppercase">{{ T "read_this_next" }}</h1>
             </div>
             {{ range $trending }}
-            <div class="column is-4">
+            <div class="column is-4-desktop is-offset-1-mobile is-10-mobile">
                 <div class="parent">
                     <div class="trending-image" style="background-image: url({{ .Image }})">
-                        a
                     </div>
                     <div class="title">
-                        {{ .Title }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
                     </div>
                 </div>
             </div>
