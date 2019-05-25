@@ -49,6 +49,7 @@
 </div>
 {{ end }}
 {{ partial "list.html" . }}
+{{ if gt (len $.SubSectionsPageIds) 0 }}
 <div class="container is-dekstop">
     <div class="columns is-multiline">
         <div class="column is-12 has-text-centered">
@@ -69,4 +70,6 @@
         </div>
     </div>
 </div>
+{{ end }}
+
 {{ end }}
