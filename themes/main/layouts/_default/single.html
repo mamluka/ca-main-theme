@@ -21,8 +21,9 @@
                     <div class="content">
                         {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
                     </div>
+                    {{ if gt (len .Params.tags) 0 }}
                     <div>
-                        <span class="is-size-7 has-text-weight-bold is-black">{{ T "keywords" }}:</span>
+                        <span class="is-size-7 has-text-weight-bold is-black">{{ T "tags" }}:</span>
                         {{ range .Params.tags }}
                         {{ $tag := $.Site.GetLitePageByPageHumanId . }}
                         {{ if $tag }}
@@ -30,7 +31,7 @@
                         {{ end }}
                         {{ end }}
                     </div>
-
+                    {{ end }}
                     <hr/>
                     <p>
                         {{ partial "related-articles-ad-unit.html" . }}

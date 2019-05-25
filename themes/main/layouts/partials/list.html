@@ -83,3 +83,30 @@
     </div>
 </section>
 {{ end }}
+{{ if gt .Paginator.TotalPages 1 }}
+<div class="container">
+    <div class="columns">
+        <div class="column is-offset-2 is-8 pagination-container">
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}" class="pagination-previous">{{ T "back" }}</a>
+                {{ end }}
+                {{ if .Paginator.HasNext }}
+                <a href="{{ .Paginator.Next.URL }}" class="pagination-next">{{ T "next"}}</a>
+                {{ end }}
+                <ul class="pagination-list">
+                    {{ $pagersCollection := .Paginator.AroundPagers .Paginator.PageNumber 3 6}}
+                    {{ range $index,$val := $pagersCollection }}
+                    {{ range $val }}
+                    <li><a href="{{ .URL }}" class="pagination-link {{ if eq .PageNumber $.Paginator.PageNumber }}is-current{{ end }}" aria-label="Goto page #{.PageNumber}">{{ .PageNumber }}</a></li>
+                    {{ end }}
+                    {{ if lt $index (sub (len $pagersCollection) 1) }}
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    {{ end }}
+                    {{ end}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{{ end }}

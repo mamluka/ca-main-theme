@@ -24,23 +24,19 @@ other = "Altro da leggere"
 other = "Sottosezioni"
 [tac]
 other = "Termini e condizioni"
-
-
-[follow_now]
-other = "Follow now"
-[sign_up_newsletter]
-other = "Signup for our newsletter"
-[sign_up_now]
-other = "Sign up now"
-[careers]
-other = "Careers"
-[sitemap]
-other = "Sitemap"
 [about_us]
-other = "About us"
+other = "Chi siamo"
 [advertise]
-other = "Advertise"
-[keywords]
-other = "Keywords"
+other = "Pubblicizzare"
+[careers]
+other = "Opportunità di lavoro"
 [contact_us]
-other = "Contact us"
+other = "Contattaci"
+[follow_now]
+other = "Segui ora"
+[sign_up_newsletter]
+other = "Iscriviti alla nostra newsletter"
+[sign_up_now]
+other = "Registrati ora"
+[tags]
+other = "Tag"

@@ -9372,6 +9372,9 @@ body.nfp .offer-iframe {
   .subsections-list .tag {
     margin: 0.5rem; }
 
+.pagination-container {
+  margin: 1rem 1rem; }
+
 .newsletter {
   border: 10px solid black;
   padding: 2rem; }
