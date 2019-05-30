@@ -1,9 +1,19 @@
+[about_us]
+other = "Tentang kami"
+[advertise]
+other = "Memasang Iklan"
 [also_available_in]
 other = "Juga tersedia dalam"
 [back]
 other = "Kembali"
+[careers]
+other = "Karier"
+[contact_us]
+other = "Hubungi kami"
 [first_list_title]
 other = "Pilihan Teratas"
+[follow_now]
+other = "Ikuti sekarang"
 [home]
 other = "Beranda"
 [next]
@@ -20,7 +30,13 @@ other = "Baca yang berikut ini"
 other = "Postingan terkait"
 [second_list_title]
 other = "Lebih lengkapnya"
+[sign_up_newsletter]
+other = "Silakan berlangganan buletin kami"
+[sign_up_now]
+other = "Langganan sekarang"
 [subsections]
 other = "Subbagian"
 [tac]
 other = "Syarat dan Ketentuan"
+[tags]
+other = "Tagar"

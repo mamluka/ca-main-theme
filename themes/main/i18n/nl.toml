@@ -1,9 +1,19 @@
+[about_us]
+other = "Over ons"
+[advertise]
+other = "Adverteer"
 [also_available_in]
 other = "Ook beschikbaar in"
 [back]
 other = "Vorige"
+[careers]
+other = "Carrières"
+[contact_us]
+other = "Contact"
 [first_list_title]
 other = "Favorieten"
+[follow_now]
+other = "Volg nu"
 [home]
 other = "Homepagina"
 [next]
@@ -20,7 +30,13 @@ other = "Lees dit als volgende"
 other = "Gerelateerde posts"
 [second_list_title]
 other = "Meer om te lezen"
+[sign_up_newsletter]
+other = "Meld u aan voor onze nieuwsbrief"
+[sign_up_now]
+other = "Nu aanmelden"
 [subsections]
 other = "Subsecties"
 [tac]
 other = "Algemene voorwaarden"
+[tags]
+other = "Tags"

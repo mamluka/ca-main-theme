@@ -1,9 +1,19 @@
+[about_us]
+other = "Chi siamo"
+[advertise]
+other = "Pubblicizzare"
 [also_available_in]
 other = "Disponibile anche in"
 [back]
 other = "Indietro"
+[careers]
+other = "Opportunità di lavoro"
+[contact_us]
+other = "Contattaci"
 [first_list_title]
 other = "Offerte migliori"
+[follow_now]
+other = "Segui ora"
 [home]
 other = "Home"
 [next]
@@ -20,23 +30,13 @@ other = "Leggi questo come prossimo"
 other = "Post correlati"
 [second_list_title]
 other = "Altro da leggere"
-[subsections]
-other = "Sottosezioni"
-[tac]
-other = "Termini e condizioni"
-[about_us]
-other = "Chi siamo"
-[advertise]
-other = "Pubblicizzare"
-[careers]
-other = "Opportunità di lavoro"
-[contact_us]
-other = "Contattaci"
-[follow_now]
-other = "Segui ora"
 [sign_up_newsletter]
 other = "Iscriviti alla nostra newsletter"
 [sign_up_now]
 other = "Registrati ora"
+[subsections]
+other = "Sottosezioni"
+[tac]
+other = "Termini e condizioni"
 [tags]
 other = "Tag"

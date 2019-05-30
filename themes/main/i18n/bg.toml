@@ -1,9 +1,19 @@
+[about_us]
+other = "За нас"
+[advertise]
+other = "Рекламирайте"
 [also_available_in]
 other = "Предлага се и на"
 [back]
 other = "Назад"
+[careers]
+other = "Кариери"
+[contact_us]
+other = "Свържете се с нас"
 [first_list_title]
 other = "Избрани"
+[follow_now]
+other = "Последвайте ни сега"
 [home]
 other = "Начална страница"
 [next]
@@ -20,7 +30,13 @@ other = "Прочетете след това"
 other = "Подобни публикации"
 [second_list_title]
 other = "Още за четене"
+[sign_up_newsletter]
+other = "Регистрирайте се за нашия бюлетин"
+[sign_up_now]
+other = "Регистрирайте се сега"
 [subsections]
 other = "Подраздели"
 [tac]
 other = "Общи условия"
+[tags]
+other = "Маркери"

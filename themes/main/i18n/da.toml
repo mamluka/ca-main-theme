@@ -1,9 +1,19 @@
+[about_us]
+other = "Om os"
+[advertise]
+other = "Reklamer"
 [also_available_in]
 other = "Også tilgængelig på"
 [back]
 other = "Tilbage"
+[careers]
+other = "Karrierer"
+[contact_us]
+other = "Kontakt os"
 [first_list_title]
 other = "Mest Valgte"
+[follow_now]
+other = "Følg nu"
 [home]
 other = "Hjem"
 [next]
@@ -20,7 +30,13 @@ other = "Læs dette bagefter"
 other = "Relaterede Opslag"
 [second_list_title]
 other = "Mere at læse"
+[sign_up_newsletter]
+other = "Tilmeld vores nyhedsbrev"
+[sign_up_now]
+other = "Tilmeld nu"
 [subsections]
 other = "Undersektioner"
 [tac]
 other = "Regler og Vilkår"
+[tags]
+other = "Tags"

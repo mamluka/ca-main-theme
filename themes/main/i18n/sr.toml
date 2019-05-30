@@ -1,9 +1,19 @@
+[about_us]
+other = "O nama"
+[advertise]
+other = "Reklamiraj"
 [also_available_in]
 other = "Takođe dostupno na"
 [back]
 other = "Nazad"
+[careers]
+other = "Poslovi"
+[contact_us]
+other = "Kontaktirajte nas"
 [first_list_title]
 other = "Izbor najpopularnijih"
+[follow_now]
+other = "Prati sad"
 [home]
 other = "Matična stranica"
 [next]
@@ -20,7 +30,13 @@ other = "Pročitajte ovo sledeće"
 other = "Povezane objave"
 [second_list_title]
 other = "Više za čitanje"
+[sign_up_newsletter]
+other = "Prijavi se za bilten"
+[sign_up_now]
+other = "Prijavi se sada"
 [subsections]
 other = "Pododeljci"
 [tac]
 other = "Odredbe i uslovi"
+[tags]
+other = "Tagovi"

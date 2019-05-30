@@ -1,9 +1,19 @@
+[about_us]
+other = "Rólunk"
+[advertise]
+other = "Hirdetés"
 [also_available_in]
 other = "Elérhető nyelvek:"
 [back]
 other = "Vissza"
+[careers]
+other = "Karrier"
+[contact_us]
+other = "Kapcsolatfelvétel"
 [first_list_title]
 other = "Legnépszerűbbek"
+[follow_now]
+other = "Kövess most"
 [home]
 other = "Kezdőlap"
 [next]
@@ -20,7 +30,13 @@ other = "Olvasás következőként"
 other = "Kapcsolódó bejegyzések"
 [second_list_title]
 other = "További olvasnivaló"
+[sign_up_newsletter]
+other = "Iratkozz fel hírlevelünkre"
+[sign_up_now]
+other = "Regisztrálj most"
 [subsections]
 other = "Almenük"
 [tac]
 other = "Általános szerződési feltételek"
+[tags]
+other = "Címkék"

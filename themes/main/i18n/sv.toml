@@ -1,9 +1,19 @@
+[about_us]
+other = "Om oss"
+[advertise]
+other = "Annonsera"
 [also_available_in]
 other = "Också tillgängligt på"
 [back]
 other = "Tillbaka"
+[careers]
+other = "Karriärer"
+[contact_us]
+other = "Kontakta oss"
 [first_list_title]
 other = "Toppval"
+[follow_now]
+other = "Följ nu"
 [home]
 other = "Hem"
 [next]
@@ -20,7 +30,13 @@ other = "Läs detta härnäst"
 other = "Relaterade artiklar"
 [second_list_title]
 other = "Mer att läsa"
+[sign_up_newsletter]
+other = "Anmäl dig till vårt nyhetsbrev"
+[sign_up_now]
+other = "Anmäl dig nu"
 [subsections]
 other = "Underavdelning"
 [tac]
 other = "Villkor"
+[tags]
+other = "Taggar"

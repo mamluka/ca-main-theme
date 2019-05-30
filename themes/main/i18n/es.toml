@@ -1,9 +1,19 @@
+[about_us]
+other = "Sobre nosotros"
+[advertise]
+other = "Publicidad"
 [also_available_in]
 other = "También disponible en"
 [back]
 other = "Atrás"
+[careers]
+other = "Trabajos"
+[contact_us]
+other = "Contacto"
 [first_list_title]
 other = "Los mejores contenidos"
+[follow_now]
+other = "Síguenos ahora"
 [home]
 other = "Inicio"
 [next]
@@ -20,8 +30,13 @@ other = "Lee lo siguiente"
 other = "Publicaciones relacionadas"
 [second_list_title]
 other = "Más para leer"
+[sign_up_newsletter]
+other = "Suscríbete a nuestro boletín de noticias"
+[sign_up_now]
+other = "Regístrate ahora"
 [subsections]
 other = "Subsecciones"
 [tac]
 other = "Términos y condiciones"
-
+[tags]
+other = "Etiquetas"

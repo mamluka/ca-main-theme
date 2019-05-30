@@ -1,9 +1,19 @@
+[about_us]
+other = "Giới thiệu về chúng tôi"
+[advertise]
+other = "Quảng cáo"
 [also_available_in]
 other = "Cũng có bản"
 [back]
 other = "Quay lại"
+[careers]
+other = "Nghề nghiệp"
+[contact_us]
+other = "Liên hệ với chúng tôi"
 [first_list_title]
 other = "Lựa chọn hàng đầu"
+[follow_now]
+other = "Theo dõi ngay"
 [home]
 other = "Trang chủ"
 [next]
@@ -20,7 +30,13 @@ other = "Đọc phần này tiếp theo"
 other = "Bài liên quan"
 [second_list_title]
 other = "Nội dung khác"
+[sign_up_newsletter]
+other = "Đăng ký nhận bản tin của chúng tôi"
+[sign_up_now]
+other = "Đăng ký ngay"
 [subsections]
 other = "Tiểu mục"
 [tac]
 other = "Điều khoản và Điều kiện"
+[tags]
+other = "Nhãn"

@@ -1,9 +1,19 @@
+[about_us]
+other = "Despre noi"
+[advertise]
+other = "Reclame"
 [also_available_in]
 other = "Valabil şi în"
 [back]
 other = "Înapoi"
+[careers]
+other = "Cariere"
+[contact_us]
+other = "Contactați-ne"
 [first_list_title]
 other = "Cele mai bune selecții"
+[follow_now]
+other = "Urmăreşte-ne acum"
 [home]
 other = "Acasă"
 [next]
@@ -20,7 +30,13 @@ other = "Citeşte în continuare"
 other = "Postări asociate"
 [second_list_title]
 other = "Mai multe de citit"
+[sign_up_newsletter]
+other = "Înregistrează-te pentru ştirile noastre"
+[sign_up_now]
+other = "Înregistrează-te acum"
 [subsections]
 other = "Subsecțiuni"
 [tac]
 other = "Termeni şi condiții"
+[tags]
+other = "Etichete"

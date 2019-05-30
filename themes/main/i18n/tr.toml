@@ -1,9 +1,19 @@
+[about_us]
+other = "Hakkımızda"
+[advertise]
+other = "Reklam"
 [also_available_in]
 other = "Mevcut diller"
 [back]
 other = "Geri"
+[careers]
+other = "Kariyer"
+[contact_us]
+other = "Bize Ulaşın"
 [first_list_title]
 other = "En Çok Tutulanlar"
+[follow_now]
+other = "Şimdi takip edin"
 [home]
 other = "Ana Sayfa"
 [next]
@@ -20,7 +30,13 @@ other = "Sonrasında bunu oku"
 other = "İlgili gönderiler"
 [second_list_title]
 other = "Diğer okunacaklar"
+[sign_up_newsletter]
+other = "Bültenimize kaydolun"
+[sign_up_now]
+other = "Şimdi kaydolun"
 [subsections]
 other = "Alt Bölümler"
 [tac]
 other = "Şartlar ve Koşullar"
+[tags]
+other = "Etiketler"

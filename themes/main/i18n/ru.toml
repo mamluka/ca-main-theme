@@ -1,9 +1,19 @@
+[about_us]
+other = "О нас"
+[advertise]
+other = "Реклама"
 [also_available_in]
 other = "Также доступно"
 [back]
 other = "Предыдущая"
+[careers]
+other = "Профессиональные навыки"
+[contact_us]
+other = "Свяжитесь с нами"
 [first_list_title]
 other = "Лучший выбор"
+[follow_now]
+other = "Следуйте за нами прямо сейчас"
 [home]
 other = "Главная"
 [next]
@@ -20,7 +30,13 @@ other = "Читать дальше"
 other = "Похожие сообщения"
 [second_list_title]
 other = "Читать больше"
+[sign_up_newsletter]
+other = "Подпишитесь на нашу рассылку"
+[sign_up_now]
+other = "Подпишитесь прямо сейчас"
 [subsections]
 other = "Подразделы"
 [tac]
 other = "Условия и положения"
+[tags]
+other = "Теги"

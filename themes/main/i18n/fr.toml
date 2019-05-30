@@ -1,9 +1,19 @@
+[about_us]
+other = "À propos de nous"
+[advertise]
+other = "Faire de la publicité"
 [also_available_in]
 other = "Aussi disponible en"
 [back]
 other = "Retour"
+[careers]
+other = "Carrières"
+[contact_us]
+other = "Contactez-nous"
 [first_list_title]
 other = "Meilleures sélections"
+[follow_now]
+other = "Suivez-nous maintenant"
 [home]
 other = "Accueil"
 [next]
@@ -20,7 +30,13 @@ other = "Lire la suite"
 other = "Articles Similaires"
 [second_list_title]
 other = "Poursuivre la lecture"
+[sign_up_newsletter]
+other = "Inscrivez-vous à notre newsletter"
+[sign_up_now]
+other = "Inscrivez-vous maintenant"
 [subsections]
 other = "Sous-sections"
 [tac]
 other = "Termes et conditions"
+[tags]
+other = "Balises"

@@ -1,9 +1,19 @@
+[about_us]
+other = "O nás"
+[advertise]
+other = "Reklama"
 [also_available_in]
 other = "K dispozici i v"
 [back]
 other = "Zpět"
+[careers]
+other = "Pracovní místa"
+[contact_us]
+other = "Kontaktujte nás"
 [first_list_title]
 other = "Nejlepší příspěvky"
+[follow_now]
+other = "Sledovat ihned"
 [home]
 other = "Domů"
 [next]
@@ -20,7 +30,13 @@ other = "Dále si přečtěte"
 other = "Související příspěvky"
 [second_list_title]
 other = "Další čtení"
+[sign_up_newsletter]
+other = "Přihlásit se k newsletteru"
+[sign_up_now]
+other = "Přihlásit se ihned"
 [subsections]
 other = "Podsekce"
 [tac]
 other = "Podmínky"
+[tags]
+other = "Tagy"

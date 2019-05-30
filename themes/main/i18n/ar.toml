@@ -1,9 +1,19 @@
+[about_us]
+other = "معلومات عنا"
+[advertise]
+other = "أعلن"
 [also_available_in]
 other = "اللغات المتاحة"
 [back]
 other = "السابق"
+[careers]
+other = "وظائف"
+[contact_us]
+other = "اتصل بنا"
 [first_list_title]
 other = "أفضل الاختيارات"
+[follow_now]
+other = "اتبع الآن"
 [home]
 other = "الصفحة الرئيسية"
 [next]
@@ -20,7 +30,13 @@ other = "اقرأ هذا تالياً"
 other = "المشاركات ذات الصلة"
 [second_list_title]
 other = "المزيد للقراءة"
+[sign_up_newsletter]
+other = "سجّل للحصول على اخر اخبارنا"
+[sign_up_now]
+other = "أفتح حساب الأن"
 [subsections]
 other = "الأقسام الفرعية"
 [tac]
 other = "الشروط والحكام"
+[tags]
+other = "الإشعارات"

@@ -1,9 +1,19 @@
+[about_us]
+other = "Om oss"
+[advertise]
+other = "Reklamemuligheter"
 [also_available_in]
 other = "Også tilgjengelig på"
 [back]
 other = "Tilbake"
+[careers]
+other = "Karriere"
+[contact_us]
+other = "Kontakt oss"
 [first_list_title]
 other = "Toppvalg"
+[follow_now]
+other = "Følg oss nå"
 [home]
 other = "Hjem"
 [next]
@@ -20,7 +30,13 @@ other = "Les denne etterpå"
 other = "Relaterte innlegg"
 [second_list_title]
 other = "Mer å lese"
+[sign_up_newsletter]
+other = "Meld deg på nyhetsbrevet"
+[sign_up_now]
+other = "Meld deg på nå"
 [subsections]
 other = "Underkategori"
 [tac]
 other = "Vilkår og betingelser"
+[tags]
+other = "Emneknagger"

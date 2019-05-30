@@ -1,9 +1,19 @@
+[about_us]
+other = "Σχετικά με εμάς"
+[advertise]
+other = "Διαφημίστε"
 [also_available_in]
 other = "Επίσης διαθέσιμη στα"
 [back]
 other = "Πίσω"
+[careers]
+other = "Καριέρα"
+[contact_us]
+other = "Επικοινωνήστε μαζί μας"
 [first_list_title]
 other = "Αγαπημένα"
+[follow_now]
+other = "Ακολουθήστε τώρα"
 [home]
 other = "Αρχική"
 [next]
@@ -20,7 +30,13 @@ other = "Διαβάστε αυτό μετά"
 other = "Σχετικές αναρτήσεις"
 [second_list_title]
 other = "Περισσότερα"
+[sign_up_newsletter]
+other = "Εγγραφείτε στα newsletter μας"
+[sign_up_now]
+other = "Εγγραφείτε τώρα"
 [subsections]
 other = "Υποενότητες"
 [tac]
 other = "Όροι και Προϋποθέσεις"
+[tags]
+other = "Ετικέτες"

@@ -1,9 +1,19 @@
+[about_us]
+other = "当社について"
+[advertise]
+other = "広告の掲載"
 [also_available_in]
 other = "利用可能"
 [back]
 other = "前項"
+[careers]
+other = "キャリア"
+[contact_us]
+other = "照会先"
 [first_list_title]
 other = "厳選"
+[follow_now]
+other = "今すぐフォローしてください"
 [home]
 other = "ホーム"
 [next]
@@ -20,7 +30,13 @@ other = "こちらを読む"
 other = "関連する投稿"
 [second_list_title]
 other = "詳細"
+[sign_up_newsletter]
+other = "当社のニュースレターに登録する"
+[sign_up_now]
+other = "今すぐ登録"
 [subsections]
 other = "定期購"
 [tac]
 other = "利用規約"
+[tags]
+other = "タグ"

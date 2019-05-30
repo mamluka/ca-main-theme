@@ -1,9 +1,19 @@
+[about_us]
+other = "हमारे बारे मे"
+[advertise]
+other = "विज्ञापन दें"
 [also_available_in]
 other = "मे भी उपलब्ध"
 [back]
 other = "पीछे"
+[careers]
+other = "आजीविका"
+[contact_us]
+other = "हमसे संपर्क करें"
 [first_list_title]
 other = "सर्वोच्च पसंद"
+[follow_now]
+other = "अभी अनुसरण करें"
 [home]
 other = "मुख्य पृष्ठ"
 [next]
@@ -20,7 +30,13 @@ other = "आगे इसे पढ़ें"
 other = "संबंधित लेख"
 [second_list_title]
 other = "पढ़ने के लिए और भी"
+[sign_up_newsletter]
+other = "हमारे सूचनापत्र के लिए साइन अप करें"
+[sign_up_now]
+other = "अभी साइन अप करें"
 [subsections]
 other = "उपखंड"
 [tac]
 other = "नियम और शर्तें"
+[tags]
+other = "टैग"
