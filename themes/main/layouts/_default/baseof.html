@@ -10,10 +10,10 @@
     {{ end }}
     <title>{{ block "title" . }}
         {{ .Title }}
-    {{ end }}
+        {{ end }}
     </title>
     {{ block "description" . }}
-        <meta name="description" content="{{ .Params.seo_description }}" />
+    <meta name="description" content="{{ .Params.seo_description }}"/>
     {{ end }}
 
     {{ block "head" . }}
@@ -37,8 +37,8 @@
 </style>
 {{ if .Site.Params.cse }}
 <script>
-    (function() {
-        var cx = '002181638325239780683:8une2qwxzwm';
+    (function () {
+        var cx = '{{ .Site.Params.cse }}';
         var gcse = document.createElement('script');
         gcse.type = 'text/javascript';
         gcse.async = true;
@@ -57,7 +57,7 @@
 
 <div id="panel">
     {{ block "header" . }}
-        {{ partial "header" . }}
+    {{ partial "header" . }}
     {{ end }}
 
     {{ block "top-ad-unit" .}}
