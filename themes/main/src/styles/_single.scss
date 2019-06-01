@@ -1,4 +1,7 @@
 .single-page {
+  .page-title {
+    word-break: break-all;
+  }
   .page-title:after {
     background-color: #172dca;
     content: "";
@@ -20,5 +23,12 @@
       text-decoration: underline;
     }
     color: #979797;
+  }
+
+  .breadcrumb.font-size-mobile {
+    @include breakpoint($desktop) {
+      font-size: 0.75rem;
+    }
+    font-size: 1rem;
   }
 }

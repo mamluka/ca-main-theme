@@ -9441,6 +9441,9 @@ body.nfp .offer-iframe {
   .search-box .close:after {
     transform: rotate(-45deg); }
 
+.single-page .page-title {
+  word-break: break-all; }
+
 .single-page .page-title:after {
   background-color: #172dca;
   content: "";
@@ -9459,6 +9462,12 @@ body.nfp .offer-iframe {
   color: #979797; }
   .single-page .tag-link:hover {
     text-decoration: underline; }
+
+.single-page .breadcrumb.font-size-mobile {
+  font-size: 1rem; }
+  @media (min-width: 1088px) {
+    .single-page .breadcrumb.font-size-mobile {
+      font-size: 0.75rem; } }
 
 .width-container {
   padding: 1rem;
