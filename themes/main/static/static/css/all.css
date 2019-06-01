@@ -9442,7 +9442,7 @@ body.nfp .offer-iframe {
     transform: rotate(-45deg); }
 
 .single-page .page-title {
-  word-break: break-all; }
+  word-break: break-word; }
 
 .single-page .page-title:after {
   background-color: #172dca;
