@@ -61,14 +61,14 @@
     {{ end }}
 
     {{ block "top-ad-unit" .}}
-    {{ partialCached "top-ad-unit" . }}
+    {{ partialCached "ads/containers/top-ad-container" . }}
     {{ end }}
 
     {{ block "main" . }}
     {{ end }}
 
     {{ block "bottom-ad-unit" .}}
-    {{ partialCached "bottom-ad-unit" . }}
+    {{ partialCached "ads/containers/bottom-ad-container.html" . }}
     {{ end }}
 
     {{ block "footer" . }}

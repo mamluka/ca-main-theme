@@ -7,7 +7,8 @@
     "start": "webpack --config themes/main/webpack/webpack.config.dev.js --colors --watch",
     "hugo-watch": "gulp watch",
     "exec": "exec",
-    "hugo": "gulp hugo"
+    "hugo": "gulp hugo",
+    "dynamic-ads": "webpack --config themes/main/webpack/webpack.dynamic-ads.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "url": "https://github.com/wbkd/webpack-starter/issues"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",

@@ -4,6 +4,8 @@
 </div>
 <div class="addthis_sharing_toolbox"></div>
 <img src="{{ .Params.image }}">
+{{ partial "ads/containers/above-content-ad-container.html" . }}
 <div class="page-content">
     {{ .Content }}
 </div>
+{{ partial "ads/containers/below-content-ad-container.html" . }}

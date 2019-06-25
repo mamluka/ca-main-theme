@@ -10,6 +10,9 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'cheap-eval-source-map',
     cache: false,
+    optimization: {
+        minimize: false
+    },
     plugins: [
         new Webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
