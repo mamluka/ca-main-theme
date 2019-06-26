@@ -8,7 +8,7 @@ import '../../../../node_modules/jquery.mmenu/dist/jquery.mmenu.all';
 // import '../../../../node_modules/jquery-modal/jquery.modal';
 import '../../../../node_modules/sticky-sidebar/src/sticky-sidebar';
 
-import run from './dynamic-ads'
+// import run from './dynamic-ads'
 
 window.jQuery = $;
 
@@ -28,7 +28,7 @@ $(function () {
         }
     });
 
-    run();
+    // run();
 
     // var unlock = function () {
     //     let items = window.Config.offer_ids;
