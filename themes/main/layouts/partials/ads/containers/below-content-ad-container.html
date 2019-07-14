@@ -1,3 +1,5 @@
+{{ if $.Site.Params.ads.below_content_ad }}
 <div>
     {{ partial (printf "ads/units/%s-ad-unit.html" $.Site.Params.ads.below_content_ad.partial) $.Site.Params.ads.below_content_ad }}
 </div>
+{{ end }}
