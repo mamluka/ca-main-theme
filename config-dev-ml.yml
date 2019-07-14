@@ -82,6 +82,13 @@ params:
   css_theme: regular
   sitemap:
     changefreq: monthly
+  header_partials:
+    - partial: amazon-buy-button-header
+  body_partials:
+    - partial: amazon-buy-button
+      text: Buy now
+  body_partials:
+    - partial: amazon-related-products
 
   multilang:
     share_sitemap_index: true

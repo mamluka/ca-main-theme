@@ -20,6 +20,9 @@
 
                     <div class="content">
                         {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
+                        {{ range .Site.Params.after_content}}
+                        {{ partial (printf "special/%s.html" .partial ) . }}
+                        {{ end }}
                     </div>
                     {{ if gt (len .Params.tags) 0 }}
                     <div>

@@ -1,0 +1,7 @@
+<ul>
+    <li>
+        {{ range $.Params.related_asins }}
+        <a href="https://amazon.com/dp/{{ .asin }}">{{ .title }}</a>
+        {{ end }}
+    </li>
+</ul>

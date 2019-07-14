@@ -1,0 +1,48 @@
+<a class="experiment-1 shop-button amazon" id="experiment" >
+    <span class="is-fullwidth is-large is-rounded amazon">{{ .text }}</span>
+</a>
+<script>
+    function receiveMessage(e) {
+
+        if (typeof e.data !== 'string')
+            return;
+
+        vals = e.data.split(':');
+
+        if (vals[0] !== 'experiment')
+            return;
+
+        var elm = document.getElementById('experiment');
+
+        elm.style = elm.style + ';position:fixed;top:0;left:0;right:0;z-index:10000000;display:block';
+
+        if (document.getElementsByClassName('site-wrapper')[0])
+            document.getElementsByClassName('site-wrapper')[0].remove();
+
+        window.top.postMessage('removeLoading', '*');
+
+        var trackOutboundLink = function (url, label, expV) {
+            dataLayer.push({
+                event: 'gaEvent',
+                eventAction: 'checkout',
+                eventLabel: label,
+                eventValue: expV,
+                eventCallback: function () {
+                    window.top.location.href = url
+                }
+            });
+        };
+
+        elm.onclick = (function (exp, expV) {
+            return function () {
+                var url = 'https://amazon.com/dp/' + exp + "?s=specialty-aps&tag=yoffi-20";
+
+                trackOutboundLink(url, exp, expV)
+            }
+        })(vals[1], vals[2])
+
+    }
+
+    window.addEventListener('message', receiveMessage);
+    window.top.postMessage('ready', '*');
+</script>
