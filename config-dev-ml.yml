@@ -87,7 +87,7 @@ params:
   body_partials:
     - partial: amazon-buy-button
       text: Buy now
-  body_partials:
+  after_content_partials:
     - partial: amazon-related-products
 
   multilang:

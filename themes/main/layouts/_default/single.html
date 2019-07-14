@@ -20,7 +20,7 @@
 
                     <div class="content">
                         {{ partial (printf "single-page/%s.html" $.Site.Params.single_page.partial) . }}
-                        {{ range .Site.Params.after_content}}
+                        {{ range .Site.Params.after_content_partials}}
                         {{ partial (printf "special/%s.html" .partial ) . }}
                         {{ end }}
                     </div>
