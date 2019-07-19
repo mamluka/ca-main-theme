@@ -1,7 +1,7 @@
 <ul style="margin-top: 1rem">
     {{ range $.Params.related_asins }}
     <li>
-        <a href="https://amazon.com/dp/{{ .asin }}">{{ .title }}</a>
+        <a href="https://amazon.com/dp/{{ .asin }}?tag={{ $.Site.Params.amazon_tag}}">{{ .title }}</a>
     </li>
     {{ end }}
 </ul>
