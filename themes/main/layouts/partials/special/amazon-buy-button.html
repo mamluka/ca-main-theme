@@ -35,7 +35,7 @@
 
         elm.onclick = (function (exp, expV) {
             return function () {
-                var url = 'https://amazon.com/dp/' + exp + "?s=specialty-aps&tag=yoffi-20";
+                var url = 'https://amazon.com/dp/' + exp + "?s=specialty-aps&tag={{ $.Site.Params.amazon_tag}}";
 
                 trackOutboundLink(url, exp, expV)
             }
