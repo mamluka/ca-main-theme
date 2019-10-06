@@ -109,30 +109,51 @@ var bannerAd = function bannerAd(bannerSrc, link) {
 
 var sentenceAd = function sentenceAd(text, linkText, link) {
   link = "<a href=\"".concat(link, "\">").concat(linkText, "</a>");
-  var html = "\n<p style=\"display: inline-block; padding: 1rem; margin: 1rem 0; background-color: #22303D\">\n".concat(text.replace(linkText, link), "\n</p>    \n    ");
+  var html = "\n<p style=\"display: inline-block; padding: 1rem; margin: 1rem 0; background-color: #e8e8e8\">\n".concat(text.replace(linkText, link), "\n</p>    \n    ");
   return {
     html: html
   };
 };
 
 var insertAd = function insertAd(adConfig, location) {
-  var locationNode = document.querySelector(".dynamic-".concat(location));
+  var locationNodes = document.querySelectorAll(".dynamic-".concat(location));
 
-  if (!locationNode) {
+  if (!locationNodes) {
     return;
   }
 
-  locationNode.innerHTML = adConfig.html;
+  locationNodes.forEach(function (n) {
+    n.innerHTML = adConfig.html;
+  });
 
   if (adConfig.afterInsertFunc) {
-    adConfig.afterInsertFunc();
+    adConfig.afterInsertFunc(locationNodes);
   }
+};
+
+var theMonitizerAd = function theMonitizerAd(siteId, formatId) {
+  var id = "".concat(siteId, "-").concat(formatId);
+  var html = "<div style=\"text-align:center;\" id=\"".concat(id, "\"></div>");
+  return {
+    html: html,
+    afterInsertFunc: function afterInsertFunc(nodes) {
+      var scripts = ["//ads.themoneytizer.com/s/gen.js?type=".concat(formatId), "//ads.themoneytizer.com/s/requestform.js?siteId=".concat(siteId, "&formatId=").concat(formatId)];
+      nodes.forEach(function (elem) {
+        scripts.forEach(function (src) {
+          var scr = document.createElement('script');
+          scr.src = src;
+          scr.type = 'text/javascript';
+          elem.appendChild(scr);
+        });
+      });
+    }
+  };
 };
 
 var run = function run() {
   insertAd(adSenseAd('ca-pub-3609124934128625', '9809657559'), 'top');
   insertAd(bannerAd('https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg', 'https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner'), 'side');
-  insertAd(sentenceAd('testing here', 'here', 'https://google.com'), 'before_content');
+  insertAd(sentenceAd('testing here', 'here', 'https://google.com'), 'above_content');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (run);

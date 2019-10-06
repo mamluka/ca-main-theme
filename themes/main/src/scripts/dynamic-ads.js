@@ -45,23 +45,49 @@ ${text.replace(linkText, link)}
 };
 
 const insertAd = (adConfig, location) => {
-    const locationNode = document.querySelector(`.dynamic-${location}`);
+    const locationNodes = document.querySelectorAll(`.dynamic-${location}`);
 
-    if (!locationNode) {
+    if (!locationNodes) {
         return;
     }
 
-    locationNode.innerHTML = adConfig.html;
+    locationNodes.forEach((n) => {
+        n.innerHTML = adConfig.html;
+    });
 
     if (adConfig.afterInsertFunc) {
-        adConfig.afterInsertFunc();
+        adConfig.afterInsertFunc(locationNodes);
+    }
+};
+
+const theMonitizerAd = (siteId, formatId) => {
+    const id = `${siteId}-${formatId}`;
+    const html = `<div style="text-align:center;" id="${id}"></div>`;
+
+    return {
+        html: html,
+        afterInsertFunc: (nodes) => {
+            const scripts = [
+                `//ads.themoneytizer.com/s/gen.js?type=${formatId}`,
+                `//ads.themoneytizer.com/s/requestform.js?siteId=${siteId}&formatId=${formatId}`
+            ];
+
+            nodes.forEach((elem) => {
+                scripts.forEach((src) => {
+                    var scr = document.createElement('script');
+                    scr.src = src;
+                    scr.type = 'text/javascript';
+                    elem.appendChild(scr);
+                })
+            });
+        }
     }
 };
 
 const run = () => {
     insertAd(adSenseAd('ca-pub-3609124934128625', '9809657559'), 'top');
     insertAd(bannerAd('https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg', 'https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner'), 'side');
-    insertAd(sentenceAd('testing here','here','https://google.com'), 'above_content');
+    insertAd(sentenceAd('testing here', 'here', 'https://google.com'), 'above_content');
 };
 
 export default run;

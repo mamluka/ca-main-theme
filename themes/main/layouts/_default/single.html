@@ -1,6 +1,15 @@
+{{ define "robotsmeta" }}
+{{ if $.Site.Params.noindex }}
+<meta name="robots" content="index,follow"/>
+{{ else }}
+<meta name="robots" content="noindex,follow"/>
+{{ end }}
+{{ end }}
+
 {{ define "extra_meta" }}
 <meta name="o" content="{{ .Params.original_url_encoded }}"/>
 {{ end }}
+
 {{ define "main" }}
 <main>
     <div class="section">
