@@ -1,8 +1,8 @@
 {{ define "robotsmeta" }}
 {{ if $.Site.Params.noindex }}
-<meta name="robots" content="index,follow"/>
-{{ else }}
 <meta name="robots" content="noindex,follow"/>
+{{ else }}
+<meta name="robots" content="index,follow"/>
 {{ end }}
 {{ end }}
 
