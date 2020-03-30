@@ -33,6 +33,7 @@
                         {{ partial (printf "special/%s.html" .partial ) $ }}
                         {{ end }}
                     </div>
+                    {{ if .Params.tags }}
                     {{ if gt (len .Params.tags) 0 }}
                     <div>
                         <span class="is-size-7 has-text-weight-bold is-black">{{ T "tags" }}:</span>
@@ -43,6 +44,7 @@
                         {{ end }}
                         {{ end }}
                     </div>
+                    {{ end }}
                     {{ end }}
                     <hr/>
                     <p>

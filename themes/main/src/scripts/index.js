@@ -28,23 +28,21 @@ $(function () {
         }
     });
 
-    // run();
+    var unlock = function () {
+        // let items = window.Config.offer_ids;
+        //
+        // let offer = items[Math.floor(Math.random() * items.length)];
+        // let loadingDiv = $("<div class='loading'></div>");
+        //
+        // $('body').prepend(loadingDiv);
+        //
+        // $('#offer').attr('src', `https://govice.online/click?offer_id=${offer[0]}&affiliate_id=512&sub_id1=&link_id=${offer[1]}`);
+        //
+        // setTimeout(() => {
+        //     loadingDiv.remove()
+        // }, 5000)
+    };
 
-    // var unlock = function () {
-    //     let items = window.Config.offer_ids;
-    //
-    //     let offer = items[Math.floor(Math.random() * items.length)];
-    //     let loadingDiv = $("<div class='loading'></div>");
-    //
-    //     $('body').prepend(loadingDiv);
-    //
-    //     $('#offer').attr('src', `https://govice.online/click?offer_id=${offer[0]}&affiliate_id=512&sub_id1=&link_id=${offer[1]}`);
-    //
-    //     setTimeout(() => {
-    //         loadingDiv.remove()
-    //     }, 5000)
-    // };
-    //
     // $('#verify-modal').on($.modal.OPEN, function () {
     //     unlock();
     // });

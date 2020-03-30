@@ -46,6 +46,12 @@ params:
       partial: morenitch
       banner_image_url: https://eu1-us1.ckcdnassets.com/1298/creatives/6195/Forskolin250_english_300x300.jpg
       banner_url: https://mixi.mn/?a=146186&c=6186&p=r&s2=side-banner
+    in_post:
+      partial: dynamic
+      location: in_post
+    related_articles:
+      partial: dynamic
+      location: related
   homepage_publish_date: false
   sitemap:
     changefreq: monthly
