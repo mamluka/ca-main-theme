@@ -16,7 +16,7 @@ params:
   pageNotFoundTitle: 404 - Page not found
   cse: 002181638325239780683:wuepawcebtk
   gtm: GTM-PQPN62S
-  static_domain_prefix: https://nude-famous-people-com.all-assets.pro/
+  static_domain_prefix: https://nude-famous-people-com.siteassets.xyz/
   single_page:
     partial: nfp.com
   ads:
@@ -42,7 +42,7 @@ params:
     related_articles:
       partial: dynamic
       location: related
-      
+
   homepage_publish_date: false
   sitemap:
     changefreq: monthly
