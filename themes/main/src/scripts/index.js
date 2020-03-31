@@ -47,6 +47,22 @@ $(function () {
     //     unlock();
     // });
 
+    let links = [
+        'https://mixi.mn/?a=146186&c=7&p=r',
+        'https://mixi.mn/?a=146186&c=8493&p=r',
+        'https://mixi.mn/?a=146186&c=8425&p=r',
+        'https://mixi.mn/?a=146186&c=22&p=r',
+        'https://mixi.mn/?a=146186&c=8433&p=r'
+    ];
+
+    var link = links[Math.floor(Math.random() * links.length)];
+
+    $('.unlock-purchase-link').attr('href', link);
+
+    $('.open-page-modal').click(function () {
+        $('#page-modal').toggleClass('is-active');
+    });
+
     if ($('.sidebar').length) {
         new StickySidebar('.sidebar', {
             topSpacing: 20,
@@ -55,6 +71,11 @@ $(function () {
             innerWrapperSelector: '.sidebar__inner'
         });
     }
+    ;
+
+    $('.unlock-button').click(function () {
+        $('.unlock-progress').show();
+    });
 
     $('.search-icon').click(function () {
         $('#search-box-modal').toggleClass('is-active');

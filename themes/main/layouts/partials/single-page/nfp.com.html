@@ -7,7 +7,7 @@
         <p>
             We have our stuff search the internet and the dark web to find you all of <strong>{{ .Params.name }}</strong> nude photos, we have around {{ index (seq 15 | shuffle) 0 }} online galleries
         </p>
-        <a class="button is-fullwidth is-danger" href="#verify-modal" rel="modal:open">UNLOCK GALLERIES</a>
+        <a class="button is-fullwidth is-danger open-page-modal">UNLOCK GALLERIES</a>
     </div>
     <div class="column is-12">
         <div class="columns is-multiline gallery-container">
@@ -23,7 +23,7 @@
             {{ if .Params.gallery }}
             {{ range first 12 .Params.gallery }}
             <div class="column is-4 gallery-hover">
-                <a href="#verify-modal" rel="modal:open">
+                <a href="#verify-modal" rel="modal:open" class="open-page-modal">
                     <figure class="image locked-image">
                         <img src="{{ . }}">
                     </figure>
@@ -32,18 +32,58 @@
             {{ end }}
             {{ end }}
             <div class="column is-12">
-                <a class="button is-fullwidth is-danger" href="#verify-modal" rel="modal:open">DON'T FORGET TO UNLOCK GALLERIES</a>
+                <a class="button is-fullwidth is-danger open-page-moda">DON'T FORGET TO UNLOCK GALLERIES</a>
             </div>
         </div>
     </div>
 </div>
 <!--<div id="verify-modal" class="modal2">-->
-    <!--<div class="content">-->
-        <!--<h4>-->
-            <!--You can watch all nude photos of {{ .Params.name }} if you verify your age-->
-        <!--</h4>-->
-    <!--</div>-->
-    <!--<iframe id="offer" class="offer-iframe">-->
-
-    <!--</iframe>-->
+<!--<div class="content">-->
+<!--<h4>-->
+<!--You can watch all nude photos of {{ .Params.name }} if you verify your age-->
+<!--</h4>-->
 <!--</div>-->
+<!--<iframe id="offer" class="offer-iframe">-->
+
+<!--</iframe>-->
+<!--</div>-->
+<div class="modal" id="page-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="search-box">
+            <div class="content">
+                <h2>
+                    To UNLOCK all galleries please make a PURCHASE by clicking the button below.
+                </h2>
+                <br/>
+                <a class="button is-fullwidth is-danger unlock-purchase-link" target="_blank">Make a purchase</a>
+
+            </div>
+            <div class="content">
+                <h2>
+                    Enter your order details to unlock.
+                </h2>
+            </div>
+            <div class="field">
+                <label class="label">Order ID</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Order ID">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Amount</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Order Amount">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button s-fullwidth is-danger unlock-button">Unlock</button>
+                </div>
+            </div>
+            <progress class="progress is-small is-fullwidth is-primary unlock-progress" style="display: none;" max="100">15%</progress>
+        </div>
+    </div>
+</div>
+
+
