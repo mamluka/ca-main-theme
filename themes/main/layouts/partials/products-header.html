@@ -1,0 +1,28 @@
+{{ if gt (len .Params.products) 0 }}
+<div class="columns product-cards">
+    {{ range .Params.products }}
+    <div class="card product-card">
+        <div class="card-image product-card-image-container">
+            <a href="https://www.amazon.com/dp/{{ .asin }}">
+                <img src="{{ .image }}" alt="{{ .title }}" class="child">
+            </a>
+        </div>
+        <div class="card-content">
+            <div class="product-card-brand">
+                <p class="title is-5">{{ .brand }}</p>
+            </div>
+
+            <div class="content product-card-description">
+                <div class="product-title"><strong>{{ .title }}</strong></div>
+                <hr/>
+                <div class="small-txt">
+                    {{ .description}}
+                </div>
+            </div>
+            <hr/>
+            <a href="https://www.amazon.com/dp/{{ .asin }}" class="button is-primary">Check price</a>
+        </div>
+    </div>
+    {{ end}}
+</div>
+{{end }}
